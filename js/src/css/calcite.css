@@ -1,0 +1,13 @@
+@import "../../node_modules/@esri/calcite-components/dist/cdn/main.css";
+
+:root {
+  --spa-border: var(--calcite-color-border-2);
+  --spa-surface: var(--calcite-color-foreground-1);
+  --spa-surface-2: var(--calcite-color-foreground-2);
+  --spa-muted: var(--calcite-color-text-2);
+  --spa-accent: var(--calcite-color-brand);
+  --spa-info: var(--calcite-color-status-info);
+  --spa-success: var(--calcite-color-status-success);
+  --spa-warning: var(--calcite-color-status-warning);
+  --spa-danger: var(--calcite-color-status-danger);
+}
