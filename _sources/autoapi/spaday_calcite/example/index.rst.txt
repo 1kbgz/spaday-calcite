@@ -1,0 +1,77 @@
+spaday_calcite.example
+======================
+
+.. py:module:: spaday_calcite.example
+
+.. autoapi-nested-parse::
+
+   Operations dashboard example built with Calcite components.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_calcite.example.navigation
+   spaday_calcite.example.metrics
+   spaday_calcite.example.requests
+   spaday_calcite.example.table
+   spaday_calcite.example.filters
+   spaday_calcite.example.page
+   spaday_calcite.example.styles
+   spaday_calcite.example.app
+
+
+Module Contents
+---------------
+
+.. py:data:: navigation
+
+.. py:data:: metrics
+
+.. py:data:: requests
+
+.. py:data:: table
+
+.. py:data:: filters
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--calcite-color-text-1); background: var(--calcite-color-background); font-family: var(--calcite-sans-family); }
+        spa-nav { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1.2rem; border-bottom: 1px solid var(--calcite-color-border-2); background: var(--calcite-color-foreground-1); }
+        .page { display: grid; gap: 1rem; width: min(100%, 76rem); margin: auto; padding: 1rem 1rem 3rem; }
+        calcite-navigation { position: sticky; z-index: 10; top: 0; }
+        .hero { padding: clamp(1.5rem, 5vw, 3.5rem); color: white; background: linear-gradient(120deg, #004874, #007ac2 60%, #00a9ce); border-radius: .9rem; }
+        .hero h1 { max-width: 14ch; margin: .4rem 0; font-size: clamp(2.2rem, 6vw, 4.5rem); line-height: .95; letter-spacing: -.045em; }
+        .hero p { max-width: 40rem; margin: 1rem 0 0; font-size: 1.05rem; line-height: 1.6; }
+        .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .13em; }
+        .metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        calcite-card { width: 100%; }
+        .workspace-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr); gap: 1rem; align-items: start; }
+        calcite-panel { border: 1px solid var(--calcite-color-border-2); }
+        @media (max-width: 720px) { .metric-grid, .workspace-grid { grid-template-columns: 1fr; } }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+

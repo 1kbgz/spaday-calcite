@@ -1,0 +1,19 @@
+test_example
+============
+
+.. py:module:: test_example
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_example.test_example_serves_calcite_workspace
+
+
+Module Contents
+---------------
+
+.. py:function:: test_example_serves_calcite_workspace()
+

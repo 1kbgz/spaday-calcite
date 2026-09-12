@@ -1,0 +1,101 @@
+spaday_calcite.gallery
+======================
+
+.. py:module:: spaday_calcite.gallery
+
+.. autoapi-nested-parse::
+
+   Browser gallery for every generated Calcite wrapper.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_calcite.gallery.COMPONENT_NAMES
+   spaday_calcite.gallery.COMPONENT_SNIPPETS
+   spaday_calcite.gallery.OVERLAYS
+   spaday_calcite.gallery.catalog
+   spaday_calcite.gallery.page
+   spaday_calcite.gallery.styles
+   spaday_calcite.gallery.app
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   spaday_calcite.gallery._label
+   spaday_calcite.gallery._component
+   spaday_calcite.gallery._parent
+   spaday_calcite.gallery._preview
+
+
+Module Contents
+---------------
+
+.. py:data:: COMPONENT_NAMES
+   :value: ('CalciteAccordion', 'CalciteAccordionItem', 'CalciteAction', 'CalciteActionBar',...
+
+
+.. py:data:: COMPONENT_SNIPPETS
+
+.. py:function:: _label(schema) -> str
+
+.. py:function:: _component(name: str)
+
+.. py:function:: _parent(name: str, component)
+
+.. py:data:: OVERLAYS
+
+.. py:function:: _preview(name: str)
+
+.. py:data:: catalog
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--calcite-color-text-1); background: var(--calcite-color-background); font-family: var(--calcite-sans-family); }
+        spa-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1.2rem; background: var(--calcite-color-foreground-1); border-bottom: 1px solid var(--calcite-color-border-2); }
+        .gallery-page { display: grid; gap: 2rem; width: min(100%, 96rem); margin: auto; padding: clamp(1rem, 3vw, 2.5rem); }
+        .hero { padding: clamp(1.5rem, 4vw, 3.5rem); color: white; background: linear-gradient(135deg, #005e95, #009edb); border-radius: 1rem; box-shadow: 0 20px 50px #00304d33; }
+        .hero h1 { margin: .35rem 0; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: .95; letter-spacing: -.05em; }
+        .hero p { max-width: 50rem; margin: 1rem 0 0; font-size: 1.1rem; line-height: 1.6; }
+        .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .14em; }
+        #catalog > p { color: var(--calcite-color-text-2); }
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        .gallery-card { display: grid; align-content: start; gap: .7rem; min-width: 0; min-height: 13rem; padding: 1rem; overflow: visible; background: var(--calcite-color-foreground-1); border: 1px solid var(--calcite-color-border-2); border-radius: .65rem; box-shadow: var(--calcite-shadow-sm); }
+        .gallery-card h3 { margin: 0; font-size: 1rem; }
+        .gallery-card code { overflow: hidden; color: var(--calcite-color-text-2); font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
+        .component-preview { display: grid; align-content: center; min-width: 0; min-height: 6rem; max-height: 18rem; overflow: auto; padding: .75rem; border: 1px dashed var(--calcite-color-border-2); }
+        .component-preview > *, .overlay-preview { max-width: 100%; }
+        .overlay-preview { display: grid; gap: .5rem; }
+        calcite-shell { display: block; min-height: 8rem; }
+        calcite-graph, calcite-handle, calcite-sort-handle { display: block; min-height: 2rem; }
+        @media (max-width: 900px) { .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 600px) { .catalog-grid { grid-template-columns: 1fr; } }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+

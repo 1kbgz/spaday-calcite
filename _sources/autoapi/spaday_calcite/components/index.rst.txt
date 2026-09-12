@@ -1,0 +1,2470 @@
+spaday_calcite.components
+=========================
+
+.. py:module:: spaday_calcite.components
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_calcite.components.CalciteAccordion
+   spaday_calcite.components.CalciteAccordionItem
+   spaday_calcite.components.CalciteAction
+   spaday_calcite.components.CalciteActionBar
+   spaday_calcite.components.CalciteActionGroup
+   spaday_calcite.components.CalciteActionMenu
+   spaday_calcite.components.CalciteActionPad
+   spaday_calcite.components.CalciteAlert
+   spaday_calcite.components.CalciteAutocomplete
+   spaday_calcite.components.CalciteAutocompleteItem
+   spaday_calcite.components.CalciteAutocompleteItemGroup
+   spaday_calcite.components.CalciteAvatar
+   spaday_calcite.components.CalciteBlock
+   spaday_calcite.components.CalciteBlockGroup
+   spaday_calcite.components.CalciteBlockSection
+   spaday_calcite.components.CalciteButton
+   spaday_calcite.components.CalciteCard
+   spaday_calcite.components.CalciteCardGroup
+   spaday_calcite.components.CalciteCarousel
+   spaday_calcite.components.CalciteCarouselItem
+   spaday_calcite.components.CalciteCheckbox
+   spaday_calcite.components.CalciteChip
+   spaday_calcite.components.CalciteChipGroup
+   spaday_calcite.components.CalciteColorPicker
+   spaday_calcite.components.CalciteColorPickerHexInput
+   spaday_calcite.components.CalciteColorPickerSwatch
+   spaday_calcite.components.CalciteCombobox
+   spaday_calcite.components.CalciteComboboxItem
+   spaday_calcite.components.CalciteComboboxItemGroup
+   spaday_calcite.components.CalciteDatePicker
+   spaday_calcite.components.CalciteDialog
+   spaday_calcite.components.CalciteDropdown
+   spaday_calcite.components.CalciteDropdownGroup
+   spaday_calcite.components.CalciteDropdownItem
+   spaday_calcite.components.CalciteFab
+   spaday_calcite.components.CalciteFilter
+   spaday_calcite.components.CalciteFlow
+   spaday_calcite.components.CalciteFlowItem
+   spaday_calcite.components.CalciteFocusTrap
+   spaday_calcite.components.CalciteGraph
+   spaday_calcite.components.CalciteHandle
+   spaday_calcite.components.CalciteIcon
+   spaday_calcite.components.CalciteInlineEditable
+   spaday_calcite.components.CalciteInput
+   spaday_calcite.components.CalciteInputDatePicker
+   spaday_calcite.components.CalciteInputMessage
+   spaday_calcite.components.CalciteInputNumber
+   spaday_calcite.components.CalciteInputText
+   spaday_calcite.components.CalciteInputTimePicker
+   spaday_calcite.components.CalciteInputTimeZone
+   spaday_calcite.components.CalciteLabel
+   spaday_calcite.components.CalciteLink
+   spaday_calcite.components.CalciteList
+   spaday_calcite.components.CalciteListItem
+   spaday_calcite.components.CalciteListItemGroup
+   spaday_calcite.components.CalciteLoader
+   spaday_calcite.components.CalciteMenu
+   spaday_calcite.components.CalciteMenuItem
+   spaday_calcite.components.CalciteMeter
+   spaday_calcite.components.CalciteNavigation
+   spaday_calcite.components.CalciteNavigationLogo
+   spaday_calcite.components.CalciteNavigationUser
+   spaday_calcite.components.CalciteNotice
+   spaday_calcite.components.CalciteOption
+   spaday_calcite.components.CalciteOptionGroup
+   spaday_calcite.components.CalcitePagination
+   spaday_calcite.components.CalcitePanel
+   spaday_calcite.components.CalcitePopover
+   spaday_calcite.components.CalciteProgress
+   spaday_calcite.components.CalciteRadioButton
+   spaday_calcite.components.CalciteRadioButtonGroup
+   spaday_calcite.components.CalciteRating
+   spaday_calcite.components.CalciteScrim
+   spaday_calcite.components.CalciteSegmentedControl
+   spaday_calcite.components.CalciteSegmentedControlItem
+   spaday_calcite.components.CalciteSelect
+   spaday_calcite.components.CalciteSheet
+   spaday_calcite.components.CalciteShell
+   spaday_calcite.components.CalciteShellPanel
+   spaday_calcite.components.CalciteSlider
+   spaday_calcite.components.CalciteSortHandle
+   spaday_calcite.components.CalciteSortableList
+   spaday_calcite.components.CalciteSplitButton
+   spaday_calcite.components.CalciteStack
+   spaday_calcite.components.CalciteStepper
+   spaday_calcite.components.CalciteStepperItem
+   spaday_calcite.components.CalciteSwatch
+   spaday_calcite.components.CalciteSwatchGroup
+   spaday_calcite.components.CalciteSwitch
+   spaday_calcite.components.CalciteTab
+   spaday_calcite.components.CalciteTabNav
+   spaday_calcite.components.CalciteTabTitle
+   spaday_calcite.components.CalciteTable
+   spaday_calcite.components.CalciteTableCell
+   spaday_calcite.components.CalciteTableHeader
+   spaday_calcite.components.CalciteTableRow
+   spaday_calcite.components.CalciteTabs
+   spaday_calcite.components.CalciteTextArea
+   spaday_calcite.components.CalciteTile
+   spaday_calcite.components.CalciteTileGroup
+   spaday_calcite.components.CalciteTimePicker
+   spaday_calcite.components.CalciteTooltip
+   spaday_calcite.components.CalciteTree
+   spaday_calcite.components.CalciteTreeItem
+
+
+Module Contents
+---------------
+
+.. py:class:: CalciteAccordion(*children: spaday.component.Child, key: str | None = None, appearance: Literal['transparent', 'solid'] | None = None, icon_position: Literal['start', 'end'] | None = None, icon_type: Literal['chevron', 'caret', 'plus-minus'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['single', 'single-persist', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-accordion'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAccordionItem(*children: spaday.component.Child, key: str | None = None, description: str | None = None, expanded: bool | None = None, heading: str | None = None, heading_level: Any = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-accordion-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAction(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, alignment: Literal['start', 'center', 'end'] | None = None, appearance: Literal['transparent', 'solid'] | None = None, compact: bool | None = None, disabled: bool | None = None, form: str | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, indicator: bool | None = None, label: str | None = None, loading: bool | None = None, overflow_disabled: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, text: str | None = None, text_enabled: bool | None = None, type: Literal['button', 'reset', 'submit'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-action'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteActionBar(*children: spaday.component.Child, key: str | None = None, actions_end_group_label: str | None = None, actions_start_group_label: str | None = None, expand_disabled: bool | None = None, expanded: bool | None = None, expand_position: Literal['start', 'end'] | None = None, floating: bool | None = None, layout: Literal['horizontal', 'vertical', 'grid'] | None = None, overflow_actions_disabled: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, position: Literal['start', 'end'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_appearance: Literal['neutral', 'highlight'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-action-bar'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteActionGroup(*children: spaday.component.Child, key: str | None = None, columns: Any = None, expanded: bool | None = None, label: str | None = None, layout: Literal['horizontal', 'vertical', 'grid'] | None = None, menu_open: bool | None = None, menu_placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, overflow_actions_disabled: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-action-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteActionMenu(*children: spaday.component.Child, key: str | None = None, appearance: Literal['transparent', 'solid'] | None = None, expanded: bool | None = None, label: str | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-action-menu'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteActionPad(*children: spaday.component.Child, key: str | None = None, actions_end_group_label: str | None = None, expand_disabled: bool | None = None, expanded: bool | None = None, layout: Literal['horizontal', 'vertical', 'grid'] | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, position: Literal['start', 'end'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_appearance: Literal['neutral', 'highlight'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-action-pad'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAlert(*children: spaday.component.Child, key: str | None = None, auto_close: bool | None = None, auto_close_duration: Literal['medium', 'fast', 'slow'] | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, kind: Literal['brand', 'danger', 'info', 'warning', 'success'] | None = None, label: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, open: bool | None = None, placement: Literal['top', 'bottom', 'top-start', 'top-end', 'bottom-start', 'bottom-end'] | None = None, queue: Literal['last', 'next', 'immediate'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Alerts are meant to provide a way to communicate urgent or important information to users, frequently as a result of an action they took in your app. Alerts are positioned at the bottom of the page. Multiple opened alerts will be added to a queue, allowing users to dismiss them in the order they are provided.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-alert'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAutocomplete(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'end'] | None = None, autocomplete: str | None = None, disabled: bool | None = None, form: str | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, input_value: str | None = None, label: str | None = None, label_text: str | None = None, loading: bool | None = None, max_length: float | None = None, min_length: float | None = None, name: str | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, pattern: str | None = None, placeholder: str | None = None, placement: Literal['top', 'bottom', 'top-start', 'top-end', 'bottom-start', 'bottom-end'] | None = None, prefix_text: str | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, suffix_text: str | None = None, top_layer_disabled: bool | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-autocomplete'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAutocompleteItem(*children: spaday.component.Child, key: str | None = None, description: str | None = None, disabled: bool | None = None, heading: str | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, selected: bool | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-autocomplete-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAutocompleteItemGroup(*children: spaday.component.Child, key: str | None = None, heading: str | None = None, label: Any = None, position: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-autocomplete-item-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteAvatar(*children: spaday.component.Child, key: str | None = None, full_name: str | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, thumbnail: str | None = None, user_id: str | None = None, username: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-avatar'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteBlock(*children: spaday.component.Child, key: str | None = None, collapsible: bool | None = None, description: str | None = None, disabled: bool | None = None, drag_disabled: bool | None = None, drag_handle: bool | None = None, expanded: bool | None = None, heading: str | None = None, heading_level: Any = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, loading: bool | None = None, menu_placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, sort_handle_open: bool | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-block'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteBlockGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, drag_enabled: bool | None = None, group: str | None = None, label: str | None = None, loading: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, sort_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-block-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteBlockSection(*children: spaday.component.Child, key: str | None = None, expanded: bool | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, open: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, text: str | None = None, toggle_display: Literal['button', 'switch'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-block-section'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteButton(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end', 'space-between', 'icon-start-space-between', 'icon-end-space-between'] | None = None, appearance: Literal['outline-fill', 'transparent', 'solid', 'outline'] | None = None, disabled: bool | None = None, download: Any = None, form: str | None = None, href: str | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, kind: Literal['brand', 'danger', 'inverse', 'neutral'] | None = None, label: str | None = None, loading: bool | None = None, name: str | None = None, rel: str | None = None, round: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, split_child: Any = None, target: str | None = None, type: Literal['button', 'reset', 'submit'] | None = None, width: Literal['auto', 'half', 'full'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Passing a 'href' will render an anchor link, instead of a button. Role will be set to link, or button, depending on this. It is the consumers responsibility to add aria information, rel, target, for links, and any button attributes for form submission
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-button'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCard(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, loading: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, selectable: bool | None = None, selected: bool | None = None, thumbnail_position: Literal['inline-start', 'inline-end', 'block-start', 'block-end'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-card'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCardGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-card-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCarousel(*children: spaday.component.Child, key: str | None = None, arrow_type: Literal['inline', 'none', 'edge'] | None = None, autoplay: Any = None, autoplay_duration: float | None = None, control_overlay: bool | None = None, disabled: bool | None = None, label: str | None = None, pagination_disabled: bool | None = None, pagination_position: Literal['top', 'bottom'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-carousel'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCarouselItem(*children: spaday.component.Child, key: str | None = None, label: str | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-carousel-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCheckbox(*children: spaday.component.Child, key: str | None = None, checked: bool | None = None, disabled: bool | None = None, form: str | None = None, indeterminate: bool | None = None, label: str | None = None, label_text: str | None = None, name: str | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-checkbox'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteChip(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'solid', 'outline'] | None = None, closable: bool | None = None, closed: bool | None = None, close_on_delete: bool | None = None, disabled: bool | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, kind: Literal['brand', 'inverse', 'neutral'] | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selected: bool | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-chip'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteChipGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-chip-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteColorPicker(*children: spaday.component.Child, key: str | None = None, alpha_channel: bool | None = None, channels_disabled: bool | None = None, clearable: bool | None = None, disabled: bool | None = None, field_disabled: bool | None = None, format: Literal['auto', 'hex', 'hexa', 'hsv', 'rgb', 'rgb-css', 'rgba-css', 'hsl-css', 'hsla-css', 'rgba', 'hsl', 'hsla', 'hsva'] | None = None, hex_disabled: bool | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, saved_disabled: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, storage_id: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-color-picker'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteColorPickerHexInput(*children: spaday.component.Child, key: str | None = None, allow_empty: bool | None = None, alpha_channel: bool | None = None, hex_label: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-color-picker-hex-input'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteColorPickerSwatch(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, color: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-color-picker-swatch'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteCombobox(*children: spaday.component.Child, key: str | None = None, allow_custom_values: bool | None = None, clear_disabled: bool | None = None, disabled: bool | None = None, filter_text: str | None = None, form: str | None = None, label: str | None = None, label_text: str | None = None, max_items: float | None = None, name: str | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placeholder: str | None = None, placeholder_icon: str | None = None, placeholder_icon_flip_rtl: bool | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, select_all_enabled: bool | None = None, selection_appearance: Literal['icon', 'highlight'] | None = None, selection_display: Literal['single', 'all', 'fit'] | None = None, selection_mode: Literal['single', 'single-persist', 'ancestors', 'multiple'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, top_layer_disabled: bool | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-combobox'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteComboboxItem(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, description: str | None = None, disabled: bool | None = None, filter_disabled: bool | None = None, guid: str | None = None, heading: str | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, label: Any = None, selected: bool | None = None, short_heading: str | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-combobox-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteComboboxItemGroup(*children: spaday.component.Child, key: str | None = None, label: str | None = None, position: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-combobox-item-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteDatePicker(*children: spaday.component.Child, key: str | None = None, active_range: Literal['start', 'end'] | None = None, calendars: Any = None, heading_level: Any = None, layout: Literal['horizontal', 'vertical'] | None = None, max: str | None = None, min: str | None = None, month_style: Literal['abbreviated', 'wide'] | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, proximity_selection_disabled: bool | None = None, range: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-date-picker'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteDialog(*children: spaday.component.Child, key: str | None = None, close_disabled: bool | None = None, description: str | None = None, drag_enabled: bool | None = None, escape_disabled: bool | None = None, focus_trap_disabled: bool | None = None, fullscreen_disabled: bool | None = None, heading: str | None = None, heading_level: Any = None, icon: str | None = None, icon_flip_rtl: bool | None = None, kind: Literal['brand', 'danger', 'info', 'warning', 'success'] | None = None, loading: bool | None = None, menu_open: bool | None = None, modal: bool | None = None, open: bool | None = None, outside_close_disabled: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['center', 'top', 'bottom', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'cover'] | None = None, resizable: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, width: Literal['s', 'm', 'l'] | None = None, width_scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-dialog'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteDropdown(*children: spaday.component.Child, key: str | None = None, close_on_select_disabled: bool | None = None, disabled: bool | None = None, max_items: float | None = None, offset_distance: float | None = None, offset_skidding: float | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, reference_element: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, type: Literal['hover', 'click'] | None = None, width: Literal['s', 'm', 'l'] | None = None, width_scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-dropdown'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteDropdownGroup(*children: spaday.component.Child, key: str | None = None, group_title: str | None = None, position: float | None = None, selection_mode: Literal['none', 'single', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-dropdown-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteDropdownItem(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, href: str | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, rel: str | None = None, selected: bool | None = None, target: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-dropdown-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteFab(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'solid'] | None = None, disabled: bool | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, kind: Literal['brand', 'danger', 'inverse', 'neutral'] | None = None, label: str | None = None, loading: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, text: str | None = None, text_enabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-fab'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteFilter(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, placeholder: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-filter'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteFlow(*children: spaday.component.Child, key: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-flow'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteFlowItem(*children: spaday.component.Child, key: str | None = None, closable: bool | None = None, closed: bool | None = None, collapsed: bool | None = None, collapsible: bool | None = None, description: str | None = None, disabled: bool | None = None, heading: str | None = None, heading_level: Any = None, icon: str | None = None, icon_flip_rtl: bool | None = None, loading: bool | None = None, menu_open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selected: bool | None = None, show_back_button: bool | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-flow-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteFocusTrap(*children: spaday.component.Child, key: str | None = None, focus_trap_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-focus-trap'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteGraph(*children: spaday.component.Child, key: str | None = None, highlight_max: float | None = None, highlight_min: float | None = None, max: float | None = None, min: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-graph'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteHandle(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, drag_handle: str | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-handle'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteIcon(*children: spaday.component.Child, key: str | None = None, flip_rtl: bool | None = None, icon: str | None = None, preload: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, text_label: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-icon'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInlineEditable(*children: spaday.component.Child, key: str | None = None, controls: bool | None = None, disabled: bool | None = None, editing_enabled: bool | None = None, loading: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-inline-editable'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInput(*children: spaday.component.Child, key: str | None = None, accept: str | None = None, alignment: Literal['start', 'end'] | None = None, autocomplete: str | None = None, clearable: bool | None = None, disabled: bool | None = None, form: str | None = None, group_separator: bool | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, label: str | None = None, label_text: str | None = None, loading: bool | None = None, max: float | None = None, max_length: float | None = None, min: float | None = None, min_length: float | None = None, multiple: bool | None = None, name: str | None = None, number_button_type: Literal['horizontal', 'vertical', 'none'] | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, pattern: str | None = None, placeholder: str | None = None, prefix_text: str | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, step: Any = None, suffix_text: str | None = None, type: Literal['color', 'date', 'datetime-local', 'email', 'file', 'image', 'month', 'number', 'password', 'search', 'tel', 'text', 'time', 'url', 'week'] | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputDatePicker(*children: spaday.component.Child, key: str | None = None, calendars: Any = None, disabled: bool | None = None, focus_trap_disabled: bool | None = None, form: str | None = None, heading_level: Any = None, label: str | None = None, label_text: str | None = None, layout: Literal['horizontal', 'vertical'] | None = None, max: str | None = None, min: str | None = None, month_style: Literal['abbreviated', 'wide'] | None = None, name: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['top', 'bottom', 'top-start', 'top-end', 'bottom-start', 'bottom-end'] | None = None, proximity_selection_disabled: bool | None = None, range: bool | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, top_layer_disabled: bool | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-date-picker'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputMessage(*children: spaday.component.Child, key: str | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-message'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputNumber(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, autocomplete: str | None = None, clearable: bool | None = None, disabled: bool | None = None, form: str | None = None, group_separator: bool | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, integer: bool | None = None, label: str | None = None, label_text: str | None = None, loading: bool | None = None, max: float | None = None, max_length: float | None = None, min: float | None = None, min_length: float | None = None, name: str | None = None, number_button_type: Literal['horizontal', 'vertical', 'none'] | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, placeholder: str | None = None, prefix_text: str | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, step: Any = None, suffix_text: str | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-number'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputText(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, autocomplete: str | None = None, clearable: bool | None = None, disabled: bool | None = None, form: str | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, label: str | None = None, label_text: str | None = None, loading: bool | None = None, max_length: float | None = None, min_length: float | None = None, name: str | None = None, pattern: str | None = None, placeholder: str | None = None, prefix_text: str | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, suffix_text: str | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-text'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputTimePicker(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, focus_trap_disabled: bool | None = None, form: str | None = None, hour_format: Literal['24', 'user', '12'] | None = None, label: str | None = None, label_text: str | None = None, max: str | None = None, min: str | None = None, name: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, read_only: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, step: float | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-time-picker'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteInputTimeZone(*children: spaday.component.Child, key: str | None = None, clearable: bool | None = None, disabled: bool | None = None, form: str | None = None, label_text: str | None = None, max_items: float | None = None, mode: Literal['name', 'offset', 'region'] | None = None, name: str | None = None, offset_style: Literal['user', 'utc', 'gmt'] | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, read_only: bool | None = None, reference_date: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, top_layer_disabled: bool | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-input-time-zone'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteLabel(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, for_: str | None = None, layout: Literal['block', 'inline', 'inline-space-between', 'default'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-label'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteLink(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, download: Any = None, href: str | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, rel: str | None = None, target: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Any attributes placed on <calcite-link> component will propagate to the rendered child Passing a 'href' allows the component to behave like a link It is the consumers responsibility to add aria information, rel, target, for links, and any link attributes for form submission
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-link'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteList(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, display_mode: Literal['nested', 'flat'] | None = None, drag_enabled: bool | None = None, filter_enabled: bool | None = None, filter_label: str | None = None, filter_placeholder: str | None = None, filter_text: str | None = None, group: str | None = None, interaction_mode: Literal['interactive', 'static'] | None = None, label: str | None = None, loading: bool | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_appearance: Literal['icon', 'border', 'highlight'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, sort_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   A general purpose list that enables users to construct list items that conform to Calcite styling.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-list'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteListItem(*children: spaday.component.Child, key: str | None = None, closable: bool | None = None, closed: bool | None = None, description: str | None = None, disabled: bool | None = None, drag_disabled: bool | None = None, expanded: bool | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, open: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, selected: bool | None = None, sort_handle_open: bool | None = None, top_layer_disabled: bool | None = None, unavailable: bool | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-list-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteListItemGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, heading: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-list-item-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteLoader(*children: spaday.component.Child, key: str | None = None, inline: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, text: str | None = None, type: Literal['indeterminate', 'determinate', 'determinate-value'] | None = None, value: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-loader'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteMenu(*children: spaday.component.Child, key: str | None = None, label: str | None = None, layout: Literal['horizontal', 'vertical'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-menu'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteMenuItem(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, breadcrumb: bool | None = None, href: str | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, open: bool | None = None, rel: str | None = None, target: str | None = None, text: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-menu-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteMeter(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'solid', 'outline'] | None = None, disabled: bool | None = None, fill_type: Literal['single', 'range'] | None = None, form: str | None = None, group_separator: bool | None = None, high: float | None = None, label: str | None = None, low: float | None = None, max: float | None = None, min: float | None = None, name: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, range_labels: bool | None = None, range_label_type: Literal['percent', 'units'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, unit_label: str | None = None, value: float | None = None, value_label: bool | None = None, value_label_type: Literal['percent', 'units'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-meter'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteNavigation(*children: spaday.component.Child, key: str | None = None, label: str | None = None, navigation_action: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-navigation'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteNavigationLogo(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, description: str | None = None, heading: str | None = None, heading_level: Any = None, href: str | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, label: str | None = None, rel: str | None = None, target: str | None = None, thumbnail: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-navigation-logo'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteNavigationUser(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, full_name: str | None = None, label: str | None = None, text_disabled: bool | None = None, thumbnail: str | None = None, user_id: str | None = None, username: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-navigation-user'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteNotice(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'transparent'] | None = None, closable: bool | None = None, icon: Any = None, icon_flip_rtl: bool | None = None, kind: Literal['brand', 'danger', 'info', 'neutral', 'warning', 'success'] | None = None, open: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, width: Literal['auto', 'half', 'full'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Notices are intended to be used to present users with important-but-not-crucial contextual tips or copy. Because notices are displayed inline, a common use case is displaying them on page-load to present users with short hints or contextual copy. They are optionally closable - useful for keeping track of whether or not a user has closed the notice. You can also choose not to display a notice on page load and set the "active" attribute as needed to contextually provide inline messaging to users.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-notice'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteOption(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, selected: bool | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-option'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteOptionGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-option-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalcitePagination(*children: spaday.component.Child, key: str | None = None, group_separator: bool | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, page_size: float | None = None, scale: Literal['s', 'm', 'l'] | None = None, start_item: float | None = None, total_items: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-pagination'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalcitePanel(*children: spaday.component.Child, key: str | None = None, closable: bool | None = None, closed: bool | None = None, collapsed: bool | None = None, collapse_direction: Literal['down', 'up'] | None = None, collapsible: bool | None = None, description: str | None = None, disabled: bool | None = None, heading: str | None = None, heading_level: Any = None, icon: str | None = None, icon_flip_rtl: bool | None = None, loading: bool | None = None, menu_open: bool | None = None, menu_placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-panel'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalcitePopover(*children: spaday.component.Child, key: str | None = None, auto_close: bool | None = None, closable: bool | None = None, flip_disabled: bool | None = None, focus_trap_disabled: bool | None = None, heading: str | None = None, heading_level: Any = None, label: str | None = None, offset_distance: float | None = None, offset_skidding: float | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, pointer_disabled: bool | None = None, reference_element: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, trigger_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-popover'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteProgress(*children: spaday.component.Child, key: str | None = None, label: str | None = None, reversed: bool | None = None, text: str | None = None, type: Literal['indeterminate', 'determinate'] | None = None, value: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-progress'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteRadioButton(*children: spaday.component.Child, key: str | None = None, checked: bool | None = None, disabled: bool | None = None, form: str | None = None, label_text: str | None = None, name: str | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_message: str | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-radio-button'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteRadioButtonGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label_text: str | None = None, layout: Literal['horizontal', 'vertical'] | None = None, name: str | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_icon: Any = None, validation_message: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-radio-button-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteRating(*children: spaday.component.Child, key: str | None = None, average: float | None = None, count: float | None = None, disabled: bool | None = None, form: str | None = None, label_text: str | None = None, name: str | None = None, read_only: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, show_chip: bool | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_icon: Any = None, validation_message: str | None = None, value: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-rating'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteScrim(*children: spaday.component.Child, key: str | None = None, loading: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-scrim'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSegmentedControl(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'solid', 'outline'] | None = None, disabled: bool | None = None, form: str | None = None, label_text: str | None = None, layout: Literal['horizontal', 'vertical'] | None = None, name: str | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, width: Literal['auto', 'full'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-segmented-control'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSegmentedControlItem(*children: spaday.component.Child, key: str | None = None, checked: bool | None = None, icon_end: str | None = None, icon_flip_rtl: bool | None = None, icon_start: str | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-segmented-control-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSelect(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, form: str | None = None, label: str | None = None, label_text: str | None = None, name: str | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, width: Literal['auto', 'half', 'full'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-select'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSheet(*children: spaday.component.Child, key: str | None = None, display_mode: Literal['float', 'overlay'] | None = None, escape_disabled: bool | None = None, focus_trap_disabled: bool | None = None, height: Literal['s', 'm', 'l'] | None = None, height_scale: Literal['s', 'm', 'l'] | None = None, label: str | None = None, open: bool | None = None, outside_close_disabled: bool | None = None, position: Literal['inline-start', 'inline-end', 'block-start', 'block-end'] | None = None, resizable: bool | None = None, top_layer_disabled: bool | None = None, width: Literal['s', 'm', 'l'] | None = None, width_scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-sheet'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteShell(*children: spaday.component.Child, key: str | None = None, content_behind: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-shell'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteShellPanel(*children: spaday.component.Child, key: str | None = None, collapsed: bool | None = None, display_mode: Literal['dock', 'float', 'overlay', 'float-all', 'float-content'] | None = None, height: Literal['s', 'm', 'l'] | None = None, height_scale: Literal['s', 'm', 'l'] | None = None, layout: Literal['horizontal', 'vertical'] | None = None, position: Literal['start', 'end'] | None = None, resizable: bool | None = None, width: Literal['s', 'm', 'l'] | None = None, width_scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-shell-panel'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSlider(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, fill_placement: Literal['start', 'none', 'end'] | None = None, form: str | None = None, group_separator: bool | None = None, has_histogram: bool | None = None, label_handles: bool | None = None, label_text: str | None = None, label_ticks: bool | None = None, max: float | None = None, max_label: str | None = None, max_value: float | None = None, min: float | None = None, min_label: str | None = None, min_value: float | None = None, mirrored: bool | None = None, name: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, page_step: float | None = None, precise: bool | None = None, required: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, snap: bool | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, step: float | None = None, ticks: float | None = None, validation_icon: Any = None, validation_message: str | None = None, value: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-slider'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSortHandle(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, set_position: float | None = None, set_size: float | None = None, sort_disabled: bool | None = None, top_layer_disabled: bool | None = None, width_scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-sort-handle'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSortableList(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, drag_selector: str | None = None, group: str | None = None, handle_selector: str | None = None, layout: Literal['horizontal', 'vertical', 'grid'] | None = None, loading: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-sortable-list'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSplitButton(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline-fill', 'transparent', 'solid', 'outline'] | None = None, disabled: bool | None = None, download: Any = None, dropdown_icon_type: Literal['chevron', 'caret', 'ellipsis', 'overflow'] | None = None, dropdown_label: str | None = None, href: str | None = None, kind: Literal['brand', 'danger', 'inverse', 'neutral'] | None = None, loading: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, primary_icon_end: str | None = None, primary_icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, primary_icon_start: str | None = None, primary_label: str | None = None, primary_text: str | None = None, rel: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, target: str | None = None, top_layer_disabled: bool | None = None, width: Literal['auto', 'half', 'full'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-split-button'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteStack(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-stack'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteStepper(*children: spaday.component.Child, key: str | None = None, icon: bool | None = None, layout: Literal['horizontal', 'vertical', 'horizontal-single'] | None = None, numbered: bool | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-stepper'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteStepperItem(*children: spaday.component.Child, key: str | None = None, complete: bool | None = None, description: str | None = None, disabled: bool | None = None, error: bool | None = None, heading: str | None = None, icon_flip_rtl: bool | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-stepper-item'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSwatch(*children: spaday.component.Child, key: str | None = None, color: str | None = None, disabled: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selected: bool | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-swatch'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSwatchGroup(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-swatch-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteSwitch(*children: spaday.component.Child, key: str | None = None, checked: bool | None = None, disabled: bool | None = None, form: str | None = None, label: str | None = None, label_text_end: str | None = None, label_text_start: str | None = None, name: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, value: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-switch'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTab(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, tab: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tab'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTabNav(*children: spaday.component.Child, key: str | None = None, position: Literal['top', 'bottom'] | None = None, storage_id: str | None = None, sync_id: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tab-nav'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTabTitle(*children: spaday.component.Child, key: str | None = None, closable: bool | None = None, closed: bool | None = None, disabled: bool | None = None, icon_end: str | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, position: Literal['top', 'bottom'] | None = None, selected: bool | None = None, tab: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Tab-titles are optionally individually closable.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tab-title'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTable(*children: spaday.component.Child, key: str | None = None, bordered: bool | None = None, caption: str | None = None, current_page: float | None = None, group_separator: bool | None = None, interaction_mode: Literal['interactive', 'static'] | None = None, layout: Literal['auto', 'fixed'] | None = None, numbered: bool | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, page_size: float | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_display: Literal['none', 'top'] | None = None, selection_mode: Literal['none', 'single', 'multiple'] | None = None, striped: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-table'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTableCell(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, col_span: float | None = None, row_span: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-table-cell'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTableHeader(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, col_span: float | None = None, description: str | None = None, heading: str | None = None, row_span: float | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-table-header'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTableRow(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center', 'end'] | None = None, disabled: bool | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-table-row'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTabs(*children: spaday.component.Child, key: str | None = None, bordered: bool | None = None, layout: Literal['center', 'inline'] | None = None, position: Literal['top', 'bottom'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tabs'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTextArea(*children: spaday.component.Child, key: str | None = None, columns: float | None = None, disabled: bool | None = None, form: str | None = None, group_separator: bool | None = None, label: str | None = None, label_text: str | None = None, limit_text: bool | None = None, loading: bool | None = None, max_length: float | None = None, min_length: float | None = None, name: str | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, placeholder: str | None = None, read_only: bool | None = None, required: bool | None = None, resize: Literal['both', 'horizontal', 'vertical', 'none'] | None = None, rows: float | None = None, scale: Literal['l', 'm', 's'] | None = None, status: Literal['invalid', 'valid', 'idle'] | None = None, validation_icon: Any = None, validation_message: str | None = None, value: str | None = None, wrap: Literal['soft', 'hard'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-text-area'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTile(*children: spaday.component.Child, key: str | None = None, active: bool | None = None, alignment: Literal['start', 'center'] | None = None, description: str | None = None, disabled: bool | None = None, embed: bool | None = None, heading: str | None = None, heading_level: Any = None, href: str | None = None, icon: str | None = None, icon_flip_rtl: bool | None = None, label: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tile'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTileGroup(*children: spaday.component.Child, key: str | None = None, alignment: Literal['start', 'center'] | None = None, disabled: bool | None = None, label: str | None = None, layout: Literal['horizontal', 'vertical'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_appearance: Literal['icon', 'border', 'highlight'] | None = None, selection_mode: Literal['none', 'single', 'single-persist', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tile-group'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTimePicker(*children: spaday.component.Child, key: str | None = None, hour_format: Literal['24', 'user', '12'] | None = None, numbering_system: Literal['arab', 'arabext', 'latn'] | None = None, scale: Literal['s', 'm', 'l'] | None = None, step: float | None = None, value: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-time-picker'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTooltip(*children: spaday.component.Child, key: str | None = None, close_on_click: bool | None = None, label: str | None = None, offset_distance: float | None = None, offset_skidding: float | None = None, open: bool | None = None, overlay_positioning: Literal['fixed', 'absolute'] | None = None, placement: Literal['auto', 'top', 'bottom', 'left', 'right', 'auto-start', 'auto-end', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'right-start', 'right-end', 'left-start', 'left-end', 'leading-start', 'leading', 'leading-end', 'trailing-end', 'trailing', 'trailing-start'] | None = None, pointer_disabled: bool | None = None, reference_element: str | None = None, scale: Literal['s', 'm', 'l'] | None = None, top_layer_disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tooltip'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTree(*children: spaday.component.Child, key: str | None = None, lines: bool | None = None, scale: Literal['s', 'm', 'l'] | None = None, selection_mode: Literal['none', 'single', 'children', 'single-persist', 'multichildren', 'ancestors', 'multiple'] | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tree'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: CalciteTreeItem(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, expanded: bool | None = None, icon_flip_rtl: Literal['start', 'end', 'both'] | None = None, icon_start: str | None = None, label: str | None = None, selected: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
+
+
+   .. py:attribute:: tag
+      :value: 'calcite-tree-item'
+
+
+
+   .. py:attribute:: schema
+
+
