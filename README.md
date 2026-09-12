@@ -36,9 +36,6 @@ Coverage is enforced at two layers:
 
 The browser harness does not synthesize substitute components.
 
-> [!NOTE]
-> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
-
 ## Browser examples
 
 - [Open the field operations workspace](https://1kbgz.github.io/spaday-calcite/lite/) ([source](spaday_calcite/example.py)).
@@ -55,3 +52,6 @@ python -m spaday_calcite.gallery
 ```
 
 Open `http://127.0.0.1:8026` for the field operations workspace or `http://127.0.0.1:8027` for the complete component gallery.
+
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
