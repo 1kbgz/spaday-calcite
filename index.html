@@ -258,13 +258,6 @@
 <a class="reference external" href="https://codecov.io/gh/1kbgz/spaday-calcite"><img alt="codecov" src="https://codecov.io/gh/1kbgz/spaday-calcite/branch/main/graph/badge.svg" /></a>
 <a class="reference external" href="https://github.com/1kbgz/spaday-calcite"><img alt="License" src="https://img.shields.io/github/license/1kbgz/spaday-calcite" /></a>
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-calcite"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-calcite.svg" /></a></p>
-<section id="browser-examples">
-<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/">Field operations workspace</a> — polished application composed in Python and mounted from Pyodide.</p></li>
-<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/?example=gallery">Complete component gallery</a> — all 104 public declarative wrappers, rendered from Python with their source imports.</p></li>
-</ul>
-</section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday</span><span class="w"> </span><span class="kn">import</span> <span class="n">element</span>
@@ -292,15 +285,22 @@
 </ul>
 <p>The browser harness does not synthesize substitute components.</p>
 </section>
-<section id="development">
-<h2>Development<a class="headerlink" href="#development" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>develop
-make<span class="w"> </span>catalog
-make<span class="w"> </span><span class="nb">test</span>
-make<span class="w"> </span>test-pyodide-example
+<section id="browser-examples">
+<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/">Open the field operations workspace</a> (<a class="reference download internal" download="" href="_downloads/9089b24cf48e80de8c590c80166ade2b/example.py"><span class="xref download myst">source</span></a>).</p></li>
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/?example=gallery">Open the complete component gallery</a> (<a class="reference download internal" download="" href="_downloads/ff37d70fb23a4cce54cb7b5f04581196/gallery.py"><span class="xref download myst">source</span></a>).</p></li>
+</ul>
+<p>Both run Python locally through Pyodide; no install or server is required.</p>
+</section>
+<section id="run-the-examples-locally">
+<h2>Run the examples locally<a class="headerlink" href="#run-the-examples-locally" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[examples]"</span>
+python<span class="w"> </span>-m<span class="w"> </span>spaday_calcite.example
+python<span class="w"> </span>-m<span class="w"> </span>spaday_calcite.gallery
 </pre></div>
 </div>
-<p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spaday_calcite.example</span></code> and open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8026</span></code> for the local example. Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spaday_calcite.gallery</span></code> and open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8027</span></code> for the gallery.</p>
+<p>Open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8026</span></code> for the field operations workspace or <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8027</span></code> for the complete component gallery.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>

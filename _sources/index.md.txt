@@ -18,11 +18,6 @@ Typed [Calcite Design System](https://developers.arcgis.com/calcite-design-syste
 [![License](https://img.shields.io/github/license/1kbgz/spaday-calcite)](https://github.com/1kbgz/spaday-calcite)
 [![PyPI](https://img.shields.io/pypi/v/spaday-calcite.svg)](https://pypi.python.org/pypi/spaday-calcite)
 
-## Browser examples
-
-- [Field operations workspace](https://1kbgz.github.io/spaday-calcite/lite/) — polished application composed in Python and mounted from Pyodide.
-- [Complete component gallery](https://1kbgz.github.io/spaday-calcite/lite/?example=gallery) — all 104 public declarative wrappers, rendered from Python with their source imports.
-
 ## Usage
 
 ```python
@@ -52,16 +47,22 @@ Coverage is enforced at two layers:
 
 The browser harness does not synthesize substitute components.
 
-## Development
+## Browser examples
+
+- [Open the field operations workspace](https://1kbgz.github.io/spaday-calcite/lite/) ([source](spaday_calcite/example.py)).
+- [Open the complete component gallery](https://1kbgz.github.io/spaday-calcite/lite/?example=gallery) ([source](spaday_calcite/gallery.py)).
+
+Both run Python locally through Pyodide; no install or server is required.
+
+## Run the examples locally
 
 ```bash
-make develop
-make catalog
-make test
-make test-pyodide-example
+python -m pip install -e ".[examples]"
+python -m spaday_calcite.example
+python -m spaday_calcite.gallery
 ```
 
-Run `python -m spaday_calcite.example` and open `http://127.0.0.1:8026` for the local example. Run `python -m spaday_calcite.gallery` and open `http://127.0.0.1:8027` for the gallery.
+Open `http://127.0.0.1:8026` for the field operations workspace or `http://127.0.0.1:8027` for the complete component gallery.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
