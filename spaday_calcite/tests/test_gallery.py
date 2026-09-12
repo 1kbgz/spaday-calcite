@@ -27,6 +27,12 @@ def test_python_tree_contains_every_generated_component_and_snippet():
     assert snippet_names == expected_names
 
 
+def test_tree_preview_contains_nested_items():
+    tree = gallery._preview("CalciteTree").to_node()
+
+    assert list(_tags(tree)).count("calcite-tree-item") == 3
+
+
 def test_gallery_app_serves_python_component_tree():
     async def request():
         transport = httpx.ASGITransport(app=gallery.app)

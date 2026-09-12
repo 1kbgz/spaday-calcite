@@ -82,6 +82,32 @@ test("renders every Python wrapper in the Pyodide gallery", async ({
     unupgraded: [],
   });
 
+  const scrimGeometry = await page
+    .locator('.component-preview[data-component="calcite-scrim"]')
+    .evaluate((preview) => {
+      const scrim = preview.querySelector(":scope > calcite-scrim");
+      const previewRect = preview.getBoundingClientRect();
+      const scrimRect = scrim.getBoundingClientRect();
+      return {
+        contained:
+          scrimRect.top >= previewRect.top &&
+          scrimRect.right <= previewRect.right &&
+          scrimRect.bottom <= previewRect.bottom &&
+          scrimRect.left >= previewRect.left,
+        offsetParentIsPreview: scrim.offsetParent === preview,
+      };
+    });
+  expect(scrimGeometry).toEqual({
+    contained: true,
+    offsetParentIsPreview: true,
+  });
+
+  await expect(
+    page.locator(
+      '.component-preview[data-component="calcite-tree"] calcite-tree-item',
+    ),
+  ).toHaveCount(3);
+
   for (const name of [
     "action-menu",
     "alert",
