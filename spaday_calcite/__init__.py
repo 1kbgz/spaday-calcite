@@ -6,6 +6,7 @@ from spaday import ComponentPackage
 from . import components as _components
 from .components import *
 from .components import __all__ as _component_names
+from .design import DESIGN
 
 __version__ = "0.1.0"
 
@@ -17,6 +18,7 @@ package = ComponentPackage(
     assets_dir=_EXTENSION,
     assets=(("css", "css/calcite.css"), ("js", "cdn/index.js")),
     components=tuple(getattr(_components, name) for name in _component_names),
+    design=DESIGN,
     provides=json.loads(_VERSIONS.read_text(encoding="utf-8")) if _VERSIONS.exists() else {},
 )
 
@@ -28,4 +30,4 @@ TOKENS = {
     "calcite_color_brand": ("--calcite-color-brand", "drives --spa-accent"),
 }
 
-__all__ = [*_component_names, "TOKENS", "package"]  # noqa: PLE0604
+__all__ = [*_component_names, "DESIGN", "TOKENS", "package"]  # noqa: PLE0604

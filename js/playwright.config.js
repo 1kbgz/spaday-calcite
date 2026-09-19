@@ -33,6 +33,13 @@ export default defineConfig({
     ...(!pyodideOnly
       ? [
           {
+            command:
+              "python -m spaday.ui.conformance 8034 --package calcite",
+            url: "http://127.0.0.1:8034",
+            reuseExistingServer: !process.env.CI,
+            timeout: 120 * 1000,
+          },
+          {
             command: "PYTHONPATH=.. python -m spaday_calcite.example",
             url: "http://127.0.0.1:8026",
             reuseExistingServer: !process.env.CI,
