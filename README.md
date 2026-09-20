@@ -1,4 +1,9 @@
-# spaday-calcite
+<a href="https://github.com/1kbgz/spaday-calcite">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1kbgz/spaday-calcite/raw/main/docs/img/logo-dark.webp?raw=true">
+    <img alt="spaday-calcite logo, a faceted crystal inside a browser window" src="https://github.com/1kbgz/spaday-calcite/raw/main/docs/img/logo-light.webp?raw=true" width="1200">
+  </picture>
+</a>
 
 Typed [Calcite Design System](https://developers.arcgis.com/calcite-design-system/) components and browser assets for [spaday](https://github.com/1kbgz/spaday).
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" shape-rendering="geometricPrecision" role="img" aria-label="spaday-calcite">
+  <title>spaday-calcite</title>
+  <defs><clipPath id="viewport-clip"><rect x="124" y="243" width="1006" height="854" rx="62"/></clipPath></defs>
+  <rect x="88" y="96" width="1078" height="1036" rx="108" fill="#0C4253"/>
+  <rect x="124" y="243" width="1006" height="854" rx="62" fill="#F2F3EF"/>
+  <circle cx="208" cy="175" r="25" fill="#FC6B47"/><circle cx="295" cy="175" r="25" fill="#AECEC3"/><circle cx="383" cy="175" r="25" fill="#F2F3EF"/>
+  <g clip-path="url(#viewport-clip)">
+    <g transform="translate(-125 -99) scale(1.2)" stroke-linejoin="round">
+      <path d="M627 331 935 570 627 700Z" fill="#FC6B47"/>
+      <path d="M627 331 627 700 319 570Z" fill="#F2F3EF"/>
+      <path d="M319 570 440 950 627 700Z" fill="#AECEC3"/>
+      <path d="M935 570 814 950 627 700Z" fill="#F2F3EF"/>
+      <path d="M440 950 627 700 814 950Z" fill="#FC6B47"/>
+      <path d="M627 331 935 570 814 950H440L319 570Z" fill="none" stroke="#0C4253" stroke-width="22"/>
+      <path d="M627 331V700M319 570l308 130 308-130M440 950l187-250 187 250" fill="none" stroke="#0C4253" stroke-width="14"/>
+    </g>
+  </g>
+</svg>
