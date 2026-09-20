@@ -7,6 +7,8 @@ Typed [Calcite Design System](https://developers.arcgis.com/calcite-design-syste
 [![License](https://img.shields.io/github/license/1kbgz/spaday-calcite)](https://github.com/1kbgz/spaday-calcite)
 [![PyPI](https://img.shields.io/pypi/v/spaday-calcite.svg)](https://pypi.python.org/pypi/spaday-calcite)
 
+[![Preview of Calcite components in spaday](https://raw.githubusercontent.com/1kbgz/spaday-calcite/main/docs/img/preview.webp)](https://1kbgz.github.io/spaday-calcite/lite/)
+
 ## Usage
 
 ```python
