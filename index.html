@@ -251,8 +251,12 @@
         <article role="main" id="furo-main-content">
           <div class="toctree-wrapper compound">
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="spaday-calcite">
-<h1>spaday-calcite<a class="headerlink" href="#spaday-calcite" title="Link to this heading">¶</a></h1>
+<a href="https://github.com/1kbgz/spaday-calcite">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1kbgz/spaday-calcite/raw/main/docs/img/logo-dark.webp?raw=true">
+    <img alt="spaday-calcite logo, a faceted crystal inside a browser window" src="https://github.com/1kbgz/spaday-calcite/raw/main/docs/img/logo-light.webp?raw=true" width="800">
+  </picture>
+</a>
 <p>Typed <a class="reference external" href="https://developers.arcgis.com/calcite-design-system/">Calcite Design System</a> components and browser assets for <a class="reference external" href="https://github.com/1kbgz/spaday">spaday</a>.</p>
 <p><a class="reference external" href="https://github.com/1kbgz/spaday-calcite/actions/workflows/build.yaml"><img alt="Build Status" src="https://github.com/1kbgz/spaday-calcite/actions/workflows/build.yaml/badge.svg?branch=main&amp;event=push" /></a>
 <a class="reference external" href="https://codecov.io/gh/1kbgz/spaday-calcite"><img alt="codecov" src="https://codecov.io/gh/1kbgz/spaday-calcite/branch/main/graph/badge.svg" /></a>
@@ -260,7 +264,7 @@
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-calcite"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-calcite.svg" /></a></p>
 <p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/"><img alt="Preview of Calcite components in spaday" src="https://raw.githubusercontent.com/1kbgz/spaday-calcite/main/docs/img/preview.webp" /></a></p>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday</span><span class="w"> </span><span class="kn">import</span> <span class="n">element</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">spaday.backends.starlette</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">spaday_calcite</span><span class="w"> </span><span class="kn">import</span> <span class="n">CalciteButton</span><span class="p">,</span> <span class="n">CalciteNotice</span><span class="p">,</span> <span class="n">package</span>
@@ -277,7 +281,7 @@
 <p>Install the package with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spaday-calcite</span></code>. Assets are loaded only when the exported <code class="docutils literal notranslate"><span class="pre">package</span></code> descriptor is passed to <code class="docutils literal notranslate"><span class="pre">serve</span></code>.</p>
 </section>
 <section id="catalog-coverage">
-<h2>Catalog coverage<a class="headerlink" href="#catalog-coverage" title="Link to this heading">¶</a></h2>
+<h1>Catalog coverage<a class="headerlink" href="#catalog-coverage" title="Link to this heading">¶</a></h1>
 <p>Wrappers are generated from the Custom Elements Manifest published with <code class="docutils literal notranslate"><span class="pre">&#64;esri/calcite-components</span></code> 5.1.2. The catalog covers its 104 public, declaratively usable elements. The upstream manifest also exposes <code class="docutils literal notranslate"><span class="pre">calcite-date-picker-day</span></code> and <code class="docutils literal notranslate"><span class="pre">calcite-date-picker-month</span></code>; these are undocumented private calendar renderers that require internal controller context and cannot be authored as standalone custom elements, so they are deliberately excluded.</p>
 <p>Coverage is enforced at two layers:</p>
 <ul class="simple">
@@ -287,7 +291,7 @@
 <p>The browser harness does not synthesize substitute components.</p>
 </section>
 <section id="browser-examples">
-<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
+<h1>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/">Open the field operations workspace</a> (<a class="reference download internal" download="" href="_downloads/9089b24cf48e80de8c590c80166ade2b/example.py"><span class="xref download myst">source</span></a>).</p></li>
 <li><p><a class="reference external" href="https://1kbgz.github.io/spaday-calcite/lite/?example=gallery">Open the complete component gallery</a> (<a class="reference download internal" download="" href="_downloads/ff37d70fb23a4cce54cb7b5f04581196/gallery.py"><span class="xref download myst">source</span></a>).</p></li>
@@ -295,7 +299,7 @@
 <p>Both run Python locally through Pyodide; no install or server is required.</p>
 </section>
 <section id="run-the-examples-locally">
-<h2>Run the examples locally<a class="headerlink" href="#run-the-examples-locally" title="Link to this heading">¶</a></h2>
+<h1>Run the examples locally<a class="headerlink" href="#run-the-examples-locally" title="Link to this heading">¶</a></h1>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[examples]"</span>
 python<span class="w"> </span>-m<span class="w"> </span>spaday_calcite.example
 python<span class="w"> </span>-m<span class="w"> </span>spaday_calcite.gallery
@@ -306,7 +310,6 @@ python<span class="w"> </span>-m<span class="w"> </span>spaday_calcite.gallery
 <p class="admonition-title">Note</p>
 <p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>
 </div>
-</section>
 </section>
 
         </article>
