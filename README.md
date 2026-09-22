@@ -32,6 +32,12 @@ app = serve(page, packages=[package], title="Calcite app")
 
 Install the package with `pip install spaday-calcite`. Assets are loaded only when the exported `package` descriptor is passed to `serve`.
 
+## Generic controls
+
+Passing `package` to `serve` also selects Calcite for [spaday's generic controls](https://github.com/1kbgz/spaday#generic-controls). All 13 generic controls render as Calcite components, including typed number inputs, radio groups with child-owned selection, slotted notices, and progress normalized to Calcite's 0–100 range.
+
+Use `design="native"` with `serve` to opt out, or set a control's Calcite-specific properties with `control.for_design("calcite", ...)`.
+
 ## Catalog coverage
 
 Wrappers are generated from the Custom Elements Manifest published with `@esri/calcite-components` 5.1.2. The catalog covers its 104 public, declaratively usable elements. The upstream manifest also exposes `calcite-date-picker-day` and `calcite-date-picker-month`; these are undocumented private calendar renderers that require internal controller context and cannot be authored as standalone custom elements, so they are deliberately excluded.
