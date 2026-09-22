@@ -11,6 +11,7 @@ Submodules
    :maxdepth: 1
 
    /autoapi/spaday_calcite/components/index
+   /autoapi/spaday_calcite/design/index
    /autoapi/spaday_calcite/example/index
    /autoapi/spaday_calcite/gallery/index
 
@@ -20,6 +21,7 @@ Attributes
 
 .. autoapisummary::
 
+   spaday_calcite.DESIGN
    spaday_calcite.package
    spaday_calcite.TOKENS
 
@@ -2487,6 +2489,8 @@ Package Contents
 
    .. py:attribute:: schema
 
+
+.. py:data:: DESIGN
 
 .. py:data:: package
 

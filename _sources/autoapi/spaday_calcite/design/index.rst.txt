@@ -1,0 +1,24 @@
+spaday_calcite.design
+=====================
+
+.. py:module:: spaday_calcite.design
+
+.. autoapi-nested-parse::
+
+   How Calcite renders spaday's generic controls (:mod:`spaday.ui`).
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_calcite.design.DESIGN
+
+
+Module Contents
+---------------
+
+.. py:data:: DESIGN
+
