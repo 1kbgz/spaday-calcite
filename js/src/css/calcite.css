@@ -4,6 +4,7 @@
   --spa-border: var(--calcite-color-border-2);
   --spa-surface: var(--calcite-color-foreground-1);
   --spa-surface-2: var(--calcite-color-foreground-2);
+  --spa-text: var(--calcite-color-text-1);
   --spa-muted: var(--calcite-color-text-2);
   --spa-accent: var(--calcite-color-brand);
   --spa-info: var(--calcite-color-status-info);
