@@ -1,7 +1,7 @@
 import ast
 from pathlib import Path
 
-from spaday import element, generate
+from spaday import Token, element, generate
 from spaday.bootstrap import bootstrap
 
 from spaday_calcite import TOKENS, CalciteButton, CalciteInputText, package
@@ -30,7 +30,9 @@ def test_package_drives_bootstrap_asset_urls():
 
 
 def test_tokens_match_css_kwargs():
-    for kwarg, (prop, description) in TOKENS.items():
+    for kwarg, token in TOKENS.items():
+        assert isinstance(token, Token)
+        prop, description = token
         assert prop == f"--{kwarg.replace('_', '-')}"
         assert description.startswith("drives --spa-")
 
