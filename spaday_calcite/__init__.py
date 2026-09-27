@@ -26,6 +26,7 @@ TOKENS = {
     "calcite_color_foreground_1": Token("--calcite-color-foreground-1", "drives --spa-surface"),
     "calcite_color_foreground_2": Token("--calcite-color-foreground-2", "drives --spa-surface-2"),
     "calcite_color_border_2": Token("--calcite-color-border-2", "drives --spa-border"),
+    "calcite_color_text_1": Token("--calcite-color-text-1", "drives --spa-text"),
     "calcite_color_text_2": Token("--calcite-color-text-2", "drives --spa-muted"),
     "calcite_color_brand": Token("--calcite-color-brand", "drives --spa-accent"),
 }

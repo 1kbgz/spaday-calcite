@@ -36,6 +36,9 @@ def test_tokens_match_css_kwargs():
         assert prop == f"--{kwarg.replace('_', '-')}"
         assert description.startswith("drives --spa-")
 
+    css = (ROOT.parent / "js/src/css/calcite.css").read_text(encoding="utf-8")
+    assert "--spa-text: var(--calcite-color-text-1);" in css
+
 
 def test_generated_catalog_is_current():
     fresh = generate(str(ROOT / "custom-elements.json"))
