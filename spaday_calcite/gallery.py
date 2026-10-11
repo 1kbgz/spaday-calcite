@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from typing import Any
 
 from spaday import SetProp, by_id, element
 from spaday.backends.starlette import serve
@@ -33,7 +34,7 @@ def _component(name: str):
         "text": label,
         "username": "ada",
     }
-    kwargs = {key.replace("-", "_"): value for key, value in values.items() if key in props}
+    kwargs: dict[str, Any] = {key.replace("-", "_"): value for key, value in values.items() if key in props}
     kwargs.update(
         {
             "CalciteAction": {"icon": "layers", "text": label, "text_enabled": True},
