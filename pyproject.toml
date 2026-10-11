@@ -50,6 +50,7 @@ develop = [
     "hatchling",
     "httpx",
     "mdformat",
+    "mdformat-frontmatter",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
@@ -99,6 +100,7 @@ omit = [
     "spaday_calcite/components.py",
     "spaday_calcite/example.py",
     "spaday_calcite/tests/integration.py",
+    "spaday_calcite/tests/integration/*",
 ]
 
 [tool.coverage.report]

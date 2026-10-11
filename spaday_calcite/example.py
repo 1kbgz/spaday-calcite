@@ -41,12 +41,12 @@ navigation = (
 metrics = element(
     "section",
     CalciteCard(
-        CalciteChip("On track", kind="success"),
+        CalciteChip("On track", kind="brand"),
         CalciteProgress(value=0.78, text="78%"),
     )
     .child_in("heading", "Survey coverage")
     .child_in("description", "312 of 400 parcels reviewed"),
-    CalciteCard(CalciteChip("12 open", kind="warning")).child_in("heading", "Field incidents").child_in("description", "Three require review today"),
+    CalciteCard(CalciteChip("12 open", kind="neutral")).child_in("heading", "Field incidents").child_in("description", "Three require review today"),
     CalciteCard(CalciteAvatar(full_name="Regional crew", username="RC"))
     .child_in("heading", "Active crews")
     .child_in("description", "Eight teams currently reporting"),

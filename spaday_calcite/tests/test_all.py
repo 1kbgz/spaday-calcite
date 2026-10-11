@@ -20,6 +20,7 @@ def test_catalog_covers_the_package():
     tags = {schema.tag for schema in package.catalog}
     assert {"calcite-button", "calcite-shell", "calcite-table", "calcite-tree"} <= tags
     assert len(tags) == 104
+    assert CalciteButton.schema is not None
     assert "" in CalciteButton.schema.slots
 
 
