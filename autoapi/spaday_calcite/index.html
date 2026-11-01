@@ -1,257 +1,1148 @@
-<!doctype html>
-<html class="no-js" lang="en" data-content_root="../../">
-  <head><meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="spaday_calcite.components" href="components/index.html"><link rel="prev" title="test_versions" href="../test_versions/index.html">
+<!DOCTYPE html>
 
-    <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
-        <title>spaday_calcite - spaday-calcite v0.3.0</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>spaday_calcite &#8212; spaday-calcite v0.3.0</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/fuma.css?v=ca04d621" />
+    <link rel="stylesheet" type="text/css" href="../../_static/fuma-code.css?v=a950e949" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/searchlite.css?v=4235115c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=890fd012" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #eeffcc;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/fonts/fuma-fonts.css?v=c2892c73" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=88c24c6a" />
+    <script src="../../_static/documentation_options.js?v=e259d695"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../../_static/searchlite.js?v=a5320898"></script>
+    <script defer="defer" src="../../_static/fuma.js?v=9c325f6c"></script>
+    <script src="../../_static/js/custom.js?v=956e5d78"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="spaday_calcite.components" href="components/index.html" />
+    <link rel="prev" title="test_versions" href="../test_versions/index.html" />
     <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+      (function () {
+        var root = document.documentElement;
+        try {
+          var stored = localStorage.getItem("fuma-theme");
+          if (stored) {
+            root.classList.add(stored === "dark" ? "dark" : "light");
+            root.style.colorScheme = stored === "dark" ? "dark" : "light";
+          }
+          if (localStorage.getItem("fuma-sidebar") === "collapsed") root.dataset.sidebarCollapsed = "true";
+          if (localStorage.getItem("fuma-toc") === "collapsed") root.dataset.tocCollapsed = "true";
+        } catch (e) {}
+      })();
     </script>
-    
+  </head>
+<body class="fd-body" data-layout="docs" data-toc-style="normal" data-open-level="0">
+<div id="fd-layout"><header id="fd-subnav">
+  <div class="fd-subnav-inner">
+    <button type="button" class="fd-icon-button fd-sidebar-toggle" aria-controls="fd-sidebar" aria-expanded="false" aria-label="Toggle navigation" title="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button><a class="fd-brand" href="../../index.html"><span class="fd-brand-name">spaday-calcite v0.3.0</span>
+</a>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
-    <title>Auto light/dark, in light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
-      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
-      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
-      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
-      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
-      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
-      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
-      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
-      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
-      <circle cx="14.5" cy="9.55" r="3.6"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
-    <title>Auto light/dark, in dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
-      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
-      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
-      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
-      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
-      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
-      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
-      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-pencil" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
-      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
-      <path d="M13.5 6.5l4 4" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-  <symbol id="svg-eye" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-      <path
-        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
-<label class="overlay sidebar-overlay" for="__navigation"></label>
-<label class="overlay toc-overlay" for="__toc"></label>
-
-<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
-      </label>
+    <div class="fd-nav-actions">
+      <button type="button" class="fd-icon-button" data-fd-search-open aria-label="Search" title="Search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <a class="fd-icon-button" href="https://github.com/1kbgz/spaday-calcite" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+      <button type="button" class="fd-icon-button fd-theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon fd-icon-light"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon fd-icon-dark"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      </button>
     </div>
-    <div class="header-center">
-      <a href="../../index.html"><div class="brand">spaday-calcite <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.3.0</code></div></a>
+  </div>
+</header>
+
+<aside id="fd-sidebar" aria-label="Documentation">
+  <div class="fd-sidebar-header">
+    <div class="fd-sidebar-brand-row"><a class="fd-brand" href="../../index.html"><span class="fd-brand-name">spaday-calcite v0.3.0</span>
+</a>
+      <button type="button" class="fd-icon-button fd-sidebar-collapse" aria-label="Collapse sidebar" title="Collapse sidebar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></button>
     </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
-          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
+    <button type="button" class="fd-search-trigger" data-fd-search-open title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span>Search</span><kbd class="fd-kbd">/</kbd>
+    </button>
+  </div>
+
+  <nav class="fd-sidebar-nav">
+    <div class="fd-sidebar-group">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
-  
-  <span class="sidebar-brand-text">spaday-calcite <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.3.0</code></span>
-  
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../test_all/index.html">test_all</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../test_design/index.html">test_design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../test_gallery/index.html">test_gallery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../test_example/index.html">test_example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../test_versions/index.html">test_versions</a></li>
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">spaday_calcite</a><input aria-label="Toggle navigation of spaday_calcite" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="components/index.html">spaday_calcite.components</a></li>
-<li class="toctree-l3"><a class="reference internal" href="design/index.html">spaday_calcite.design</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example/index.html">spaday_calcite.example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gallery/index.html">spaday_calcite.gallery</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
+<ul class="fd-tree">
+  <li class="fd-tree-item">
+    <details class="fd-folder" open>
+      <summary class="fd-folder-summary" title="Toggle section: API Reference">
+        <a class="fd-link" href="../index.html">
+          <span class="fd-link-text">API Reference</span>
         </a>
-        <div class="content-icon-container">
-          <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/autoapi/spaday_calcite/index.rst.txt" title="View this page">
-    <svg><use href="#svg-eye"></use></svg>
-    <span class="visually-hidden">View this page</span>
-  </a>
+        <span class="fd-folder-marker" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m6 9 6 6 6-6"/></svg></span>
+      </summary>
+      
+<ul class="fd-tree">
+  <li class="fd-tree-item">
+    <a class="fd-link" href="../test_all/index.html">
+      <span class="fd-link-text">test_all</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="../test_design/index.html">
+      <span class="fd-link-text">test_design</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="../test_example/index.html">
+      <span class="fd-link-text">test_example</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="../test_gallery/index.html">
+      <span class="fd-link-text">test_gallery</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="../test_versions/index.html">
+      <span class="fd-link-text">test_versions</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <details class="fd-folder" open>
+      <summary class="fd-folder-summary" title="Toggle section: spaday_calcite">
+        <a class="fd-link fd-current" href="#">
+          <span class="fd-link-text">spaday_calcite</span>
+        </a>
+        <span class="fd-folder-marker" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m6 9 6 6 6-6"/></svg></span>
+      </summary>
+      
+<ul class="fd-tree">
+  <li class="fd-tree-item">
+    <a class="fd-link" href="components/index.html">
+      <span class="fd-link-text">spaday_calcite.components</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="design/index.html">
+      <span class="fd-link-text">spaday_calcite.design</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="example/index.html">
+      <span class="fd-link-text">spaday_calcite.example</span>
+    </a>
+  </li>
+  <li class="fd-tree-item">
+    <a class="fd-link" href="gallery/index.html">
+      <span class="fd-link-text">spaday_calcite.gallery</span>
+    </a>
+  </li>
+</ul>
+    </details>
+  </li>
+</ul>
+    </details>
+  </li>
+</ul>
+    </div>
+  </nav>
+
+  <div class="fd-sidebar-footer">
+    <div class="fd-toolbar">
+      <a class="fd-toolbar-item" href="https://github.com/1kbgz/spaday-calcite" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+      <div class="fd-theme-switch" role="group" aria-label="Theme">
+        <button type="button" class="fd-theme-option" data-fd-theme="light" aria-label="Light theme" title="Light theme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+        <button type="button" class="fd-theme-option" data-fd-theme="dark" aria-label="Dark theme" title="Dark theme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg></button>
+      </div>
+    </div>
+  </div>
+</aside>
+<button type="button" id="fd-sidebar-restore" class="fd-icon-button" aria-label="Expand sidebar" title="Expand sidebar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></button>
+<div class="fd-sidebar-scrim" hidden></div>
+  <div id="fd-toc-popover">
+    <button type="button" class="fd-toc-trigger" aria-expanded="false" aria-controls="fd-toc-mobile" title="On this page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg><span>On this page</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div id="fd-toc-mobile" hidden><ul class="fd-toc-list">
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#submodules">Submodules</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#attributes">Attributes</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#classes">Classes</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#package-contents">Package Contents</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAccordion">CalciteAccordion</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordion.tag">CalciteAccordion.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordion.schema">CalciteAccordion.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAccordionItem">CalciteAccordionItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordionItem.tag">CalciteAccordionItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordionItem.schema">CalciteAccordionItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAction">CalciteAction</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAction.tag">CalciteAction.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAction.schema">CalciteAction.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionBar">CalciteActionBar</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionBar.tag">CalciteActionBar.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionBar.schema">CalciteActionBar.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionGroup">CalciteActionGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionGroup.tag">CalciteActionGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionGroup.schema">CalciteActionGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionMenu">CalciteActionMenu</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionMenu.tag">CalciteActionMenu.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionMenu.schema">CalciteActionMenu.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionPad">CalciteActionPad</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionPad.tag">CalciteActionPad.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionPad.schema">CalciteActionPad.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAlert">CalciteAlert</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAlert.tag">CalciteAlert.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAlert.schema">CalciteAlert.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocomplete">CalciteAutocomplete</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocomplete.tag">CalciteAutocomplete.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocomplete.schema">CalciteAutocomplete.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocompleteItem">CalciteAutocompleteItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItem.tag">CalciteAutocompleteItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItem.schema">CalciteAutocompleteItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup">CalciteAutocompleteItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup.tag">CalciteAutocompleteItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup.schema">CalciteAutocompleteItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAvatar">CalciteAvatar</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAvatar.tag">CalciteAvatar.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAvatar.schema">CalciteAvatar.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlock">CalciteBlock</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlock.tag">CalciteBlock.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlock.schema">CalciteBlock.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlockGroup">CalciteBlockGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockGroup.tag">CalciteBlockGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockGroup.schema">CalciteBlockGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlockSection">CalciteBlockSection</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockSection.tag">CalciteBlockSection.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockSection.schema">CalciteBlockSection.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteButton">CalciteButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteButton.tag">CalciteButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteButton.schema">CalciteButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCard">CalciteCard</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCard.tag">CalciteCard.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCard.schema">CalciteCard.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCardGroup">CalciteCardGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCardGroup.tag">CalciteCardGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCardGroup.schema">CalciteCardGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCarousel">CalciteCarousel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarousel.tag">CalciteCarousel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarousel.schema">CalciteCarousel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCarouselItem">CalciteCarouselItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarouselItem.tag">CalciteCarouselItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarouselItem.schema">CalciteCarouselItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCheckbox">CalciteCheckbox</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCheckbox.tag">CalciteCheckbox.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCheckbox.schema">CalciteCheckbox.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteChip">CalciteChip</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChip.tag">CalciteChip.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChip.schema">CalciteChip.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteChipGroup">CalciteChipGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChipGroup.tag">CalciteChipGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChipGroup.schema">CalciteChipGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPicker">CalciteColorPicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPicker.tag">CalciteColorPicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPicker.schema">CalciteColorPicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput">CalciteColorPickerHexInput</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput.tag">CalciteColorPickerHexInput.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput.schema">CalciteColorPickerHexInput.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch">CalciteColorPickerSwatch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch.tag">CalciteColorPickerSwatch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch.schema">CalciteColorPickerSwatch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCombobox">CalciteCombobox</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCombobox.tag">CalciteCombobox.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCombobox.schema">CalciteCombobox.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteComboboxItem">CalciteComboboxItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItem.tag">CalciteComboboxItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItem.schema">CalciteComboboxItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup">CalciteComboboxItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup.tag">CalciteComboboxItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup.schema">CalciteComboboxItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDatePicker">CalciteDatePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDatePicker.tag">CalciteDatePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDatePicker.schema">CalciteDatePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDialog">CalciteDialog</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDialog.tag">CalciteDialog.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDialog.schema">CalciteDialog.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdown">CalciteDropdown</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdown.tag">CalciteDropdown.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdown.schema">CalciteDropdown.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdownGroup">CalciteDropdownGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownGroup.tag">CalciteDropdownGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownGroup.schema">CalciteDropdownGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdownItem">CalciteDropdownItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownItem.tag">CalciteDropdownItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownItem.schema">CalciteDropdownItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFab">CalciteFab</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFab.tag">CalciteFab.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFab.schema">CalciteFab.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFilter">CalciteFilter</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFilter.tag">CalciteFilter.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFilter.schema">CalciteFilter.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFlow">CalciteFlow</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlow.tag">CalciteFlow.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlow.schema">CalciteFlow.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFlowItem">CalciteFlowItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlowItem.tag">CalciteFlowItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlowItem.schema">CalciteFlowItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFocusTrap">CalciteFocusTrap</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFocusTrap.tag">CalciteFocusTrap.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFocusTrap.schema">CalciteFocusTrap.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteGraph">CalciteGraph</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteGraph.tag">CalciteGraph.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteGraph.schema">CalciteGraph.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteHandle">CalciteHandle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteHandle.tag">CalciteHandle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteHandle.schema">CalciteHandle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteIcon">CalciteIcon</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteIcon.tag">CalciteIcon.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteIcon.schema">CalciteIcon.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInlineEditable">CalciteInlineEditable</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInlineEditable.tag">CalciteInlineEditable.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInlineEditable.schema">CalciteInlineEditable.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInput">CalciteInput</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInput.tag">CalciteInput.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInput.schema">CalciteInput.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputDatePicker">CalciteInputDatePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputDatePicker.tag">CalciteInputDatePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputDatePicker.schema">CalciteInputDatePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputMessage">CalciteInputMessage</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputMessage.tag">CalciteInputMessage.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputMessage.schema">CalciteInputMessage.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputNumber">CalciteInputNumber</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputNumber.tag">CalciteInputNumber.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputNumber.schema">CalciteInputNumber.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputText">CalciteInputText</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputText.tag">CalciteInputText.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputText.schema">CalciteInputText.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputTimePicker">CalciteInputTimePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimePicker.tag">CalciteInputTimePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimePicker.schema">CalciteInputTimePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputTimeZone">CalciteInputTimeZone</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimeZone.tag">CalciteInputTimeZone.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimeZone.schema">CalciteInputTimeZone.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLabel">CalciteLabel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLabel.tag">CalciteLabel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLabel.schema">CalciteLabel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLink">CalciteLink</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLink.tag">CalciteLink.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLink.schema">CalciteLink.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteList">CalciteList</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteList.tag">CalciteList.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteList.schema">CalciteList.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteListItem">CalciteListItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItem.tag">CalciteListItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItem.schema">CalciteListItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteListItemGroup">CalciteListItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItemGroup.tag">CalciteListItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItemGroup.schema">CalciteListItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLoader">CalciteLoader</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLoader.tag">CalciteLoader.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLoader.schema">CalciteLoader.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMenu">CalciteMenu</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenu.tag">CalciteMenu.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenu.schema">CalciteMenu.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMenuItem">CalciteMenuItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenuItem.tag">CalciteMenuItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenuItem.schema">CalciteMenuItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMeter">CalciteMeter</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMeter.tag">CalciteMeter.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMeter.schema">CalciteMeter.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigation">CalciteNavigation</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigation.tag">CalciteNavigation.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigation.schema">CalciteNavigation.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigationLogo">CalciteNavigationLogo</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationLogo.tag">CalciteNavigationLogo.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationLogo.schema">CalciteNavigationLogo.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigationUser">CalciteNavigationUser</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationUser.tag">CalciteNavigationUser.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationUser.schema">CalciteNavigationUser.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNotice">CalciteNotice</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNotice.tag">CalciteNotice.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNotice.schema">CalciteNotice.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteOption">CalciteOption</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOption.tag">CalciteOption.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOption.schema">CalciteOption.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteOptionGroup">CalciteOptionGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOptionGroup.tag">CalciteOptionGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOptionGroup.schema">CalciteOptionGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePagination">CalcitePagination</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePagination.tag">CalcitePagination.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePagination.schema">CalcitePagination.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePanel">CalcitePanel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePanel.tag">CalcitePanel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePanel.schema">CalcitePanel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePopover">CalcitePopover</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePopover.tag">CalcitePopover.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePopover.schema">CalcitePopover.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteProgress">CalciteProgress</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteProgress.tag">CalciteProgress.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteProgress.schema">CalciteProgress.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRadioButton">CalciteRadioButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButton.tag">CalciteRadioButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButton.schema">CalciteRadioButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup">CalciteRadioButtonGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup.tag">CalciteRadioButtonGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup.schema">CalciteRadioButtonGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRating">CalciteRating</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRating.tag">CalciteRating.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRating.schema">CalciteRating.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteScrim">CalciteScrim</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteScrim.tag">CalciteScrim.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteScrim.schema">CalciteScrim.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSegmentedControl">CalciteSegmentedControl</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControl.tag">CalciteSegmentedControl.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControl.schema">CalciteSegmentedControl.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem">CalciteSegmentedControlItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem.tag">CalciteSegmentedControlItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem.schema">CalciteSegmentedControlItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSelect">CalciteSelect</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSelect.tag">CalciteSelect.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSelect.schema">CalciteSelect.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSheet">CalciteSheet</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSheet.tag">CalciteSheet.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSheet.schema">CalciteSheet.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteShell">CalciteShell</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShell.tag">CalciteShell.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShell.schema">CalciteShell.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteShellPanel">CalciteShellPanel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShellPanel.tag">CalciteShellPanel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShellPanel.schema">CalciteShellPanel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSlider">CalciteSlider</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSlider.tag">CalciteSlider.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSlider.schema">CalciteSlider.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSortHandle">CalciteSortHandle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortHandle.tag">CalciteSortHandle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortHandle.schema">CalciteSortHandle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSortableList">CalciteSortableList</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortableList.tag">CalciteSortableList.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortableList.schema">CalciteSortableList.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSplitButton">CalciteSplitButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSplitButton.tag">CalciteSplitButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSplitButton.schema">CalciteSplitButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStack">CalciteStack</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStack.tag">CalciteStack.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStack.schema">CalciteStack.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStepper">CalciteStepper</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepper.tag">CalciteStepper.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepper.schema">CalciteStepper.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStepperItem">CalciteStepperItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepperItem.tag">CalciteStepperItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepperItem.schema">CalciteStepperItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwatch">CalciteSwatch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatch.tag">CalciteSwatch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatch.schema">CalciteSwatch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwatchGroup">CalciteSwatchGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatchGroup.tag">CalciteSwatchGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatchGroup.schema">CalciteSwatchGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwitch">CalciteSwitch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwitch.tag">CalciteSwitch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwitch.schema">CalciteSwitch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTab">CalciteTab</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTab.tag">CalciteTab.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTab.schema">CalciteTab.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabNav">CalciteTabNav</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabNav.tag">CalciteTabNav.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabNav.schema">CalciteTabNav.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabTitle">CalciteTabTitle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabTitle.tag">CalciteTabTitle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabTitle.schema">CalciteTabTitle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTable">CalciteTable</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTable.tag">CalciteTable.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTable.schema">CalciteTable.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableCell">CalciteTableCell</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableCell.tag">CalciteTableCell.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableCell.schema">CalciteTableCell.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableHeader">CalciteTableHeader</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableHeader.tag">CalciteTableHeader.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableHeader.schema">CalciteTableHeader.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableRow">CalciteTableRow</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableRow.tag">CalciteTableRow.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableRow.schema">CalciteTableRow.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabs">CalciteTabs</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabs.tag">CalciteTabs.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabs.schema">CalciteTabs.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTextArea">CalciteTextArea</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTextArea.tag">CalciteTextArea.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTextArea.schema">CalciteTextArea.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTile">CalciteTile</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTile.tag">CalciteTile.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTile.schema">CalciteTile.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTileGroup">CalciteTileGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTileGroup.tag">CalciteTileGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTileGroup.schema">CalciteTileGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTimePicker">CalciteTimePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTimePicker.tag">CalciteTimePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTimePicker.schema">CalciteTimePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTooltip">CalciteTooltip</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTooltip.tag">CalciteTooltip.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTooltip.schema">CalciteTooltip.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTree">CalciteTree</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTree.tag">CalciteTree.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTree.schema">CalciteTree.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTreeItem">CalciteTreeItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTreeItem.tag">CalciteTreeItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTreeItem.schema">CalciteTreeItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.DESIGN">DESIGN</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.package">package</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.TOKENS">TOKENS</a>
+  </li>
+</ul>
 </div>
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
-              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
-          </label>
-        </div>
-        <article role="main" id="furo-main-content">
-          <section id="module-spaday_calcite">
+  </div>
+
+  <main id="fd-main">
+    <article class="fd-page">
+<nav class="fd-breadcrumbs" aria-label="Breadcrumbs">
+  <ol>
+    <li>
+      <a href="../index.html">API Reference</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m9 18 6-6-6-6"/></svg>
+    </li>
+    <li aria-current="page">spaday_calcite</li>
+  </ol>
+</nav>
+      <div class="fd-prose">
+  <section id="module-spaday_calcite">
 <span id="spaday-calcite"></span><h1>spaday_calcite<a class="headerlink" href="#module-spaday_calcite" title="Link to this heading">¶</a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
@@ -266,7 +1157,6 @@
 </section>
 <section id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
-<div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#spaday_calcite.DESIGN" title="spaday_calcite.DESIGN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DESIGN</span></code></a></p></td>
@@ -280,11 +1170,9 @@
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
-<div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#spaday_calcite.CalciteAccordion" title="spaday_calcite.CalciteAccordion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CalciteAccordion</span></code></a></p></td>
@@ -601,7 +1489,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="package-contents">
 <h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading">¶</a></h2>
@@ -2979,611 +3866,1016 @@ used by component catalogs; hand-authored catalog components may set it explicit
 </section>
 </section>
 
-        </article>
+
       </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="components/index.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">spaday_calcite.components</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../test_versions/index.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">test_versions</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 1kbgz
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">spaday_calcite</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#attributes">Attributes</a></li>
-<li><a class="reference internal" href="#classes">Classes</a></li>
-<li><a class="reference internal" href="#package-contents">Package Contents</a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordion"><code class="docutils literal notranslate"><span class="pre">CalciteAccordion</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordion.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAccordion.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordion.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAccordion.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordionItem"><code class="docutils literal notranslate"><span class="pre">CalciteAccordionItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordionItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAccordionItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAccordionItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAccordionItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAction"><code class="docutils literal notranslate"><span class="pre">CalciteAction</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAction.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAction.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAction.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAction.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionBar"><code class="docutils literal notranslate"><span class="pre">CalciteActionBar</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionBar.tag"><code class="docutils literal notranslate"><span class="pre">CalciteActionBar.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionBar.schema"><code class="docutils literal notranslate"><span class="pre">CalciteActionBar.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionGroup"><code class="docutils literal notranslate"><span class="pre">CalciteActionGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteActionGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteActionGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionMenu"><code class="docutils literal notranslate"><span class="pre">CalciteActionMenu</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionMenu.tag"><code class="docutils literal notranslate"><span class="pre">CalciteActionMenu.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionMenu.schema"><code class="docutils literal notranslate"><span class="pre">CalciteActionMenu.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionPad"><code class="docutils literal notranslate"><span class="pre">CalciteActionPad</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionPad.tag"><code class="docutils literal notranslate"><span class="pre">CalciteActionPad.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteActionPad.schema"><code class="docutils literal notranslate"><span class="pre">CalciteActionPad.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAlert"><code class="docutils literal notranslate"><span class="pre">CalciteAlert</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAlert.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAlert.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAlert.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAlert.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocomplete"><code class="docutils literal notranslate"><span class="pre">CalciteAutocomplete</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocomplete.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAutocomplete.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocomplete.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAutocomplete.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItem"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItemGroup"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItemGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItemGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItemGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAutocompleteItemGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAutocompleteItemGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAvatar"><code class="docutils literal notranslate"><span class="pre">CalciteAvatar</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAvatar.tag"><code class="docutils literal notranslate"><span class="pre">CalciteAvatar.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteAvatar.schema"><code class="docutils literal notranslate"><span class="pre">CalciteAvatar.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlock"><code class="docutils literal notranslate"><span class="pre">CalciteBlock</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlock.tag"><code class="docutils literal notranslate"><span class="pre">CalciteBlock.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlock.schema"><code class="docutils literal notranslate"><span class="pre">CalciteBlock.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockGroup"><code class="docutils literal notranslate"><span class="pre">CalciteBlockGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteBlockGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteBlockGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockSection"><code class="docutils literal notranslate"><span class="pre">CalciteBlockSection</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockSection.tag"><code class="docutils literal notranslate"><span class="pre">CalciteBlockSection.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteBlockSection.schema"><code class="docutils literal notranslate"><span class="pre">CalciteBlockSection.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteButton"><code class="docutils literal notranslate"><span class="pre">CalciteButton</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteButton.tag"><code class="docutils literal notranslate"><span class="pre">CalciteButton.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteButton.schema"><code class="docutils literal notranslate"><span class="pre">CalciteButton.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCard"><code class="docutils literal notranslate"><span class="pre">CalciteCard</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCard.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCard.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCard.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCard.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCardGroup"><code class="docutils literal notranslate"><span class="pre">CalciteCardGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCardGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCardGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCardGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCardGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarousel"><code class="docutils literal notranslate"><span class="pre">CalciteCarousel</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarousel.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCarousel.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarousel.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCarousel.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarouselItem"><code class="docutils literal notranslate"><span class="pre">CalciteCarouselItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarouselItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCarouselItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCarouselItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCarouselItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCheckbox"><code class="docutils literal notranslate"><span class="pre">CalciteCheckbox</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCheckbox.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCheckbox.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCheckbox.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCheckbox.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChip"><code class="docutils literal notranslate"><span class="pre">CalciteChip</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChip.tag"><code class="docutils literal notranslate"><span class="pre">CalciteChip.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChip.schema"><code class="docutils literal notranslate"><span class="pre">CalciteChip.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChipGroup"><code class="docutils literal notranslate"><span class="pre">CalciteChipGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChipGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteChipGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteChipGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteChipGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPicker"><code class="docutils literal notranslate"><span class="pre">CalciteColorPicker</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPicker.tag"><code class="docutils literal notranslate"><span class="pre">CalciteColorPicker.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPicker.schema"><code class="docutils literal notranslate"><span class="pre">CalciteColorPicker.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerHexInput"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerHexInput</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerHexInput.tag"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerHexInput.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerHexInput.schema"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerHexInput.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerSwatch"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerSwatch</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerSwatch.tag"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerSwatch.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteColorPickerSwatch.schema"><code class="docutils literal notranslate"><span class="pre">CalciteColorPickerSwatch.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCombobox"><code class="docutils literal notranslate"><span class="pre">CalciteCombobox</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCombobox.tag"><code class="docutils literal notranslate"><span class="pre">CalciteCombobox.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteCombobox.schema"><code class="docutils literal notranslate"><span class="pre">CalciteCombobox.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItem"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItemGroup"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItemGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItemGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItemGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteComboboxItemGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteComboboxItemGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDatePicker"><code class="docutils literal notranslate"><span class="pre">CalciteDatePicker</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDatePicker.tag"><code class="docutils literal notranslate"><span class="pre">CalciteDatePicker.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDatePicker.schema"><code class="docutils literal notranslate"><span class="pre">CalciteDatePicker.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDialog"><code class="docutils literal notranslate"><span class="pre">CalciteDialog</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDialog.tag"><code class="docutils literal notranslate"><span class="pre">CalciteDialog.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDialog.schema"><code class="docutils literal notranslate"><span class="pre">CalciteDialog.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdown"><code class="docutils literal notranslate"><span class="pre">CalciteDropdown</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdown.tag"><code class="docutils literal notranslate"><span class="pre">CalciteDropdown.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdown.schema"><code class="docutils literal notranslate"><span class="pre">CalciteDropdown.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownGroup"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownItem"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteDropdownItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteDropdownItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFab"><code class="docutils literal notranslate"><span class="pre">CalciteFab</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFab.tag"><code class="docutils literal notranslate"><span class="pre">CalciteFab.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFab.schema"><code class="docutils literal notranslate"><span class="pre">CalciteFab.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFilter"><code class="docutils literal notranslate"><span class="pre">CalciteFilter</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFilter.tag"><code class="docutils literal notranslate"><span class="pre">CalciteFilter.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFilter.schema"><code class="docutils literal notranslate"><span class="pre">CalciteFilter.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlow"><code class="docutils literal notranslate"><span class="pre">CalciteFlow</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlow.tag"><code class="docutils literal notranslate"><span class="pre">CalciteFlow.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlow.schema"><code class="docutils literal notranslate"><span class="pre">CalciteFlow.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlowItem"><code class="docutils literal notranslate"><span class="pre">CalciteFlowItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlowItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteFlowItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFlowItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteFlowItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFocusTrap"><code class="docutils literal notranslate"><span class="pre">CalciteFocusTrap</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFocusTrap.tag"><code class="docutils literal notranslate"><span class="pre">CalciteFocusTrap.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteFocusTrap.schema"><code class="docutils literal notranslate"><span class="pre">CalciteFocusTrap.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteGraph"><code class="docutils literal notranslate"><span class="pre">CalciteGraph</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteGraph.tag"><code class="docutils literal notranslate"><span class="pre">CalciteGraph.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteGraph.schema"><code class="docutils literal notranslate"><span class="pre">CalciteGraph.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteHandle"><code class="docutils literal notranslate"><span class="pre">CalciteHandle</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteHandle.tag"><code class="docutils literal notranslate"><span class="pre">CalciteHandle.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteHandle.schema"><code class="docutils literal notranslate"><span class="pre">CalciteHandle.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteIcon"><code class="docutils literal notranslate"><span class="pre">CalciteIcon</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteIcon.tag"><code class="docutils literal notranslate"><span class="pre">CalciteIcon.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteIcon.schema"><code class="docutils literal notranslate"><span class="pre">CalciteIcon.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInlineEditable"><code class="docutils literal notranslate"><span class="pre">CalciteInlineEditable</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInlineEditable.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInlineEditable.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInlineEditable.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInlineEditable.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInput"><code class="docutils literal notranslate"><span class="pre">CalciteInput</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInput.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInput.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInput.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInput.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputDatePicker"><code class="docutils literal notranslate"><span class="pre">CalciteInputDatePicker</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputDatePicker.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputDatePicker.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputDatePicker.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputDatePicker.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputMessage"><code class="docutils literal notranslate"><span class="pre">CalciteInputMessage</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputMessage.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputMessage.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputMessage.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputMessage.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputNumber"><code class="docutils literal notranslate"><span class="pre">CalciteInputNumber</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputNumber.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputNumber.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputNumber.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputNumber.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputText"><code class="docutils literal notranslate"><span class="pre">CalciteInputText</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputText.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputText.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputText.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputText.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimePicker"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimePicker</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimePicker.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimePicker.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimePicker.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimePicker.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimeZone"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimeZone</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimeZone.tag"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimeZone.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteInputTimeZone.schema"><code class="docutils literal notranslate"><span class="pre">CalciteInputTimeZone.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLabel"><code class="docutils literal notranslate"><span class="pre">CalciteLabel</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLabel.tag"><code class="docutils literal notranslate"><span class="pre">CalciteLabel.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLabel.schema"><code class="docutils literal notranslate"><span class="pre">CalciteLabel.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLink"><code class="docutils literal notranslate"><span class="pre">CalciteLink</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLink.tag"><code class="docutils literal notranslate"><span class="pre">CalciteLink.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLink.schema"><code class="docutils literal notranslate"><span class="pre">CalciteLink.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteList"><code class="docutils literal notranslate"><span class="pre">CalciteList</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteList.tag"><code class="docutils literal notranslate"><span class="pre">CalciteList.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteList.schema"><code class="docutils literal notranslate"><span class="pre">CalciteList.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItem"><code class="docutils literal notranslate"><span class="pre">CalciteListItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteListItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteListItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItemGroup"><code class="docutils literal notranslate"><span class="pre">CalciteListItemGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItemGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteListItemGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteListItemGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteListItemGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLoader"><code class="docutils literal notranslate"><span class="pre">CalciteLoader</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLoader.tag"><code class="docutils literal notranslate"><span class="pre">CalciteLoader.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteLoader.schema"><code class="docutils literal notranslate"><span class="pre">CalciteLoader.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenu"><code class="docutils literal notranslate"><span class="pre">CalciteMenu</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenu.tag"><code class="docutils literal notranslate"><span class="pre">CalciteMenu.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenu.schema"><code class="docutils literal notranslate"><span class="pre">CalciteMenu.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenuItem"><code class="docutils literal notranslate"><span class="pre">CalciteMenuItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenuItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteMenuItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMenuItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteMenuItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMeter"><code class="docutils literal notranslate"><span class="pre">CalciteMeter</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMeter.tag"><code class="docutils literal notranslate"><span class="pre">CalciteMeter.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteMeter.schema"><code class="docutils literal notranslate"><span class="pre">CalciteMeter.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigation"><code class="docutils literal notranslate"><span class="pre">CalciteNavigation</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigation.tag"><code class="docutils literal notranslate"><span class="pre">CalciteNavigation.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigation.schema"><code class="docutils literal notranslate"><span class="pre">CalciteNavigation.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationLogo"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationLogo</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationLogo.tag"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationLogo.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationLogo.schema"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationLogo.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationUser"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationUser</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationUser.tag"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationUser.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNavigationUser.schema"><code class="docutils literal notranslate"><span class="pre">CalciteNavigationUser.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNotice"><code class="docutils literal notranslate"><span class="pre">CalciteNotice</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNotice.tag"><code class="docutils literal notranslate"><span class="pre">CalciteNotice.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteNotice.schema"><code class="docutils literal notranslate"><span class="pre">CalciteNotice.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOption"><code class="docutils literal notranslate"><span class="pre">CalciteOption</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOption.tag"><code class="docutils literal notranslate"><span class="pre">CalciteOption.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOption.schema"><code class="docutils literal notranslate"><span class="pre">CalciteOption.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOptionGroup"><code class="docutils literal notranslate"><span class="pre">CalciteOptionGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOptionGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteOptionGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteOptionGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteOptionGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePagination"><code class="docutils literal notranslate"><span class="pre">CalcitePagination</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePagination.tag"><code class="docutils literal notranslate"><span class="pre">CalcitePagination.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePagination.schema"><code class="docutils literal notranslate"><span class="pre">CalcitePagination.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePanel"><code class="docutils literal notranslate"><span class="pre">CalcitePanel</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePanel.tag"><code class="docutils literal notranslate"><span class="pre">CalcitePanel.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePanel.schema"><code class="docutils literal notranslate"><span class="pre">CalcitePanel.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePopover"><code class="docutils literal notranslate"><span class="pre">CalcitePopover</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePopover.tag"><code class="docutils literal notranslate"><span class="pre">CalcitePopover.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalcitePopover.schema"><code class="docutils literal notranslate"><span class="pre">CalcitePopover.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteProgress"><code class="docutils literal notranslate"><span class="pre">CalciteProgress</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteProgress.tag"><code class="docutils literal notranslate"><span class="pre">CalciteProgress.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteProgress.schema"><code class="docutils literal notranslate"><span class="pre">CalciteProgress.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButton"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButton</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButton.tag"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButton.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButton.schema"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButton.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButtonGroup"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButtonGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButtonGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButtonGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRadioButtonGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteRadioButtonGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRating"><code class="docutils literal notranslate"><span class="pre">CalciteRating</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRating.tag"><code class="docutils literal notranslate"><span class="pre">CalciteRating.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteRating.schema"><code class="docutils literal notranslate"><span class="pre">CalciteRating.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteScrim"><code class="docutils literal notranslate"><span class="pre">CalciteScrim</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteScrim.tag"><code class="docutils literal notranslate"><span class="pre">CalciteScrim.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteScrim.schema"><code class="docutils literal notranslate"><span class="pre">CalciteScrim.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControl"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControl</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControl.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControl.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControl.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControl.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControlItem"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControlItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControlItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControlItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSegmentedControlItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSegmentedControlItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSelect"><code class="docutils literal notranslate"><span class="pre">CalciteSelect</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSelect.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSelect.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSelect.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSelect.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSheet"><code class="docutils literal notranslate"><span class="pre">CalciteSheet</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSheet.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSheet.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSheet.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSheet.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShell"><code class="docutils literal notranslate"><span class="pre">CalciteShell</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShell.tag"><code class="docutils literal notranslate"><span class="pre">CalciteShell.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShell.schema"><code class="docutils literal notranslate"><span class="pre">CalciteShell.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShellPanel"><code class="docutils literal notranslate"><span class="pre">CalciteShellPanel</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShellPanel.tag"><code class="docutils literal notranslate"><span class="pre">CalciteShellPanel.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteShellPanel.schema"><code class="docutils literal notranslate"><span class="pre">CalciteShellPanel.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSlider"><code class="docutils literal notranslate"><span class="pre">CalciteSlider</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSlider.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSlider.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSlider.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSlider.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortHandle"><code class="docutils literal notranslate"><span class="pre">CalciteSortHandle</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortHandle.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSortHandle.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortHandle.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSortHandle.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortableList"><code class="docutils literal notranslate"><span class="pre">CalciteSortableList</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortableList.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSortableList.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSortableList.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSortableList.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSplitButton"><code class="docutils literal notranslate"><span class="pre">CalciteSplitButton</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSplitButton.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSplitButton.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSplitButton.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSplitButton.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStack"><code class="docutils literal notranslate"><span class="pre">CalciteStack</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStack.tag"><code class="docutils literal notranslate"><span class="pre">CalciteStack.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStack.schema"><code class="docutils literal notranslate"><span class="pre">CalciteStack.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepper"><code class="docutils literal notranslate"><span class="pre">CalciteStepper</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepper.tag"><code class="docutils literal notranslate"><span class="pre">CalciteStepper.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepper.schema"><code class="docutils literal notranslate"><span class="pre">CalciteStepper.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepperItem"><code class="docutils literal notranslate"><span class="pre">CalciteStepperItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepperItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteStepperItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteStepperItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteStepperItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatch"><code class="docutils literal notranslate"><span class="pre">CalciteSwatch</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatch.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSwatch.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatch.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSwatch.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatchGroup"><code class="docutils literal notranslate"><span class="pre">CalciteSwatchGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatchGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSwatchGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwatchGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSwatchGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwitch"><code class="docutils literal notranslate"><span class="pre">CalciteSwitch</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwitch.tag"><code class="docutils literal notranslate"><span class="pre">CalciteSwitch.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteSwitch.schema"><code class="docutils literal notranslate"><span class="pre">CalciteSwitch.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTab"><code class="docutils literal notranslate"><span class="pre">CalciteTab</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTab.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTab.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTab.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTab.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabNav"><code class="docutils literal notranslate"><span class="pre">CalciteTabNav</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabNav.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTabNav.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabNav.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTabNav.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabTitle"><code class="docutils literal notranslate"><span class="pre">CalciteTabTitle</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabTitle.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTabTitle.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabTitle.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTabTitle.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTable"><code class="docutils literal notranslate"><span class="pre">CalciteTable</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTable.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTable.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTable.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTable.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableCell"><code class="docutils literal notranslate"><span class="pre">CalciteTableCell</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableCell.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTableCell.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableCell.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTableCell.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableHeader"><code class="docutils literal notranslate"><span class="pre">CalciteTableHeader</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableHeader.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTableHeader.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableHeader.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTableHeader.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableRow"><code class="docutils literal notranslate"><span class="pre">CalciteTableRow</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableRow.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTableRow.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTableRow.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTableRow.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabs"><code class="docutils literal notranslate"><span class="pre">CalciteTabs</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabs.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTabs.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTabs.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTabs.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTextArea"><code class="docutils literal notranslate"><span class="pre">CalciteTextArea</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTextArea.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTextArea.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTextArea.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTextArea.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTile"><code class="docutils literal notranslate"><span class="pre">CalciteTile</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTile.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTile.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTile.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTile.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTileGroup"><code class="docutils literal notranslate"><span class="pre">CalciteTileGroup</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTileGroup.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTileGroup.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTileGroup.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTileGroup.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTimePicker"><code class="docutils literal notranslate"><span class="pre">CalciteTimePicker</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTimePicker.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTimePicker.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTimePicker.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTimePicker.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTooltip"><code class="docutils literal notranslate"><span class="pre">CalciteTooltip</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTooltip.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTooltip.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTooltip.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTooltip.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTree"><code class="docutils literal notranslate"><span class="pre">CalciteTree</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTree.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTree.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTree.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTree.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTreeItem"><code class="docutils literal notranslate"><span class="pre">CalciteTreeItem</span></code></a><ul>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTreeItem.tag"><code class="docutils literal notranslate"><span class="pre">CalciteTreeItem.tag</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.CalciteTreeItem.schema"><code class="docutils literal notranslate"><span class="pre">CalciteTreeItem.schema</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#spaday_calcite.DESIGN"><code class="docutils literal notranslate"><span class="pre">DESIGN</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.package"><code class="docutils literal notranslate"><span class="pre">package</span></code></a></li>
-<li><a class="reference internal" href="#spaday_calcite.TOKENS"><code class="docutils literal notranslate"><span class="pre">TOKENS</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<nav class="fd-pagination" aria-label="Pagination">
+  <a class="fd-pagination-card fd-pagination-prev" href="../test_versions/index.html" title="Previous: test_versions">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m15 18-6-6 6-6"/></svg>
+    <span class="fd-pagination-text">
+      <span class="fd-pagination-label">Previous</span>
+      <span class="fd-pagination-title">test_versions</span>
+    </span>
+  </a>
+  <a class="fd-pagination-card fd-pagination-next" href="components/index.html" title="Next: spaday_calcite.components">
+    <span class="fd-pagination-text">
+      <span class="fd-pagination-label">Next</span>
+      <span class="fd-pagination-title">spaday_calcite.components</span>
+    </span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="m9 18 6-6-6-6"/></svg>
+  </a>
+</nav>
+<footer id="fd-footer">
+  <p class="fd-footer-meta"><span>&#169; 1kbgz</span><span>Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.</span>
+  </p>
+</footer>
+    </article>
+  </main>
+<nav id="fd-toc" aria-label="On this page">
+  <div class="fd-toc-header">
+    <p class="fd-toc-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>On this page</p>
+    <button type="button" class="fd-icon-button fd-toc-collapse" aria-label="Collapse page navigation" title="Collapse page navigation" aria-controls="fd-toc" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></button>
+  </div>
+  <div class="fd-toc-body"><svg class="fd-toc-rail" aria-hidden="true" preserveAspectRatio="none">
+      <path class="fd-toc-track" fill="none" />
+      <path class="fd-toc-thumb" fill="none" />
+    </svg><ul class="fd-toc-list">
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#submodules">Submodules</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#attributes">Attributes</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#classes">Classes</a>
+  </li>
+  <li class="fd-toc-item" data-depth="1">
+    <a href="#package-contents">Package Contents</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAccordion">CalciteAccordion</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordion.tag">CalciteAccordion.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordion.schema">CalciteAccordion.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAccordionItem">CalciteAccordionItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordionItem.tag">CalciteAccordionItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAccordionItem.schema">CalciteAccordionItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAction">CalciteAction</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAction.tag">CalciteAction.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAction.schema">CalciteAction.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionBar">CalciteActionBar</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionBar.tag">CalciteActionBar.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionBar.schema">CalciteActionBar.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionGroup">CalciteActionGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionGroup.tag">CalciteActionGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionGroup.schema">CalciteActionGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionMenu">CalciteActionMenu</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionMenu.tag">CalciteActionMenu.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionMenu.schema">CalciteActionMenu.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteActionPad">CalciteActionPad</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionPad.tag">CalciteActionPad.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteActionPad.schema">CalciteActionPad.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAlert">CalciteAlert</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAlert.tag">CalciteAlert.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAlert.schema">CalciteAlert.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocomplete">CalciteAutocomplete</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocomplete.tag">CalciteAutocomplete.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocomplete.schema">CalciteAutocomplete.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocompleteItem">CalciteAutocompleteItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItem.tag">CalciteAutocompleteItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItem.schema">CalciteAutocompleteItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup">CalciteAutocompleteItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup.tag">CalciteAutocompleteItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAutocompleteItemGroup.schema">CalciteAutocompleteItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteAvatar">CalciteAvatar</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAvatar.tag">CalciteAvatar.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteAvatar.schema">CalciteAvatar.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlock">CalciteBlock</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlock.tag">CalciteBlock.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlock.schema">CalciteBlock.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlockGroup">CalciteBlockGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockGroup.tag">CalciteBlockGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockGroup.schema">CalciteBlockGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteBlockSection">CalciteBlockSection</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockSection.tag">CalciteBlockSection.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteBlockSection.schema">CalciteBlockSection.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteButton">CalciteButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteButton.tag">CalciteButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteButton.schema">CalciteButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCard">CalciteCard</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCard.tag">CalciteCard.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCard.schema">CalciteCard.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCardGroup">CalciteCardGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCardGroup.tag">CalciteCardGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCardGroup.schema">CalciteCardGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCarousel">CalciteCarousel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarousel.tag">CalciteCarousel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarousel.schema">CalciteCarousel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCarouselItem">CalciteCarouselItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarouselItem.tag">CalciteCarouselItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCarouselItem.schema">CalciteCarouselItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCheckbox">CalciteCheckbox</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCheckbox.tag">CalciteCheckbox.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCheckbox.schema">CalciteCheckbox.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteChip">CalciteChip</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChip.tag">CalciteChip.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChip.schema">CalciteChip.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteChipGroup">CalciteChipGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChipGroup.tag">CalciteChipGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteChipGroup.schema">CalciteChipGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPicker">CalciteColorPicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPicker.tag">CalciteColorPicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPicker.schema">CalciteColorPicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput">CalciteColorPickerHexInput</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput.tag">CalciteColorPickerHexInput.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerHexInput.schema">CalciteColorPickerHexInput.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch">CalciteColorPickerSwatch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch.tag">CalciteColorPickerSwatch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteColorPickerSwatch.schema">CalciteColorPickerSwatch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteCombobox">CalciteCombobox</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCombobox.tag">CalciteCombobox.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteCombobox.schema">CalciteCombobox.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteComboboxItem">CalciteComboboxItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItem.tag">CalciteComboboxItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItem.schema">CalciteComboboxItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup">CalciteComboboxItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup.tag">CalciteComboboxItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteComboboxItemGroup.schema">CalciteComboboxItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDatePicker">CalciteDatePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDatePicker.tag">CalciteDatePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDatePicker.schema">CalciteDatePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDialog">CalciteDialog</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDialog.tag">CalciteDialog.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDialog.schema">CalciteDialog.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdown">CalciteDropdown</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdown.tag">CalciteDropdown.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdown.schema">CalciteDropdown.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdownGroup">CalciteDropdownGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownGroup.tag">CalciteDropdownGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownGroup.schema">CalciteDropdownGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteDropdownItem">CalciteDropdownItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownItem.tag">CalciteDropdownItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteDropdownItem.schema">CalciteDropdownItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFab">CalciteFab</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFab.tag">CalciteFab.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFab.schema">CalciteFab.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFilter">CalciteFilter</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFilter.tag">CalciteFilter.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFilter.schema">CalciteFilter.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFlow">CalciteFlow</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlow.tag">CalciteFlow.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlow.schema">CalciteFlow.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFlowItem">CalciteFlowItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlowItem.tag">CalciteFlowItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFlowItem.schema">CalciteFlowItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteFocusTrap">CalciteFocusTrap</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFocusTrap.tag">CalciteFocusTrap.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteFocusTrap.schema">CalciteFocusTrap.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteGraph">CalciteGraph</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteGraph.tag">CalciteGraph.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteGraph.schema">CalciteGraph.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteHandle">CalciteHandle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteHandle.tag">CalciteHandle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteHandle.schema">CalciteHandle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteIcon">CalciteIcon</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteIcon.tag">CalciteIcon.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteIcon.schema">CalciteIcon.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInlineEditable">CalciteInlineEditable</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInlineEditable.tag">CalciteInlineEditable.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInlineEditable.schema">CalciteInlineEditable.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInput">CalciteInput</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInput.tag">CalciteInput.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInput.schema">CalciteInput.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputDatePicker">CalciteInputDatePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputDatePicker.tag">CalciteInputDatePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputDatePicker.schema">CalciteInputDatePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputMessage">CalciteInputMessage</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputMessage.tag">CalciteInputMessage.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputMessage.schema">CalciteInputMessage.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputNumber">CalciteInputNumber</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputNumber.tag">CalciteInputNumber.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputNumber.schema">CalciteInputNumber.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputText">CalciteInputText</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputText.tag">CalciteInputText.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputText.schema">CalciteInputText.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputTimePicker">CalciteInputTimePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimePicker.tag">CalciteInputTimePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimePicker.schema">CalciteInputTimePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteInputTimeZone">CalciteInputTimeZone</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimeZone.tag">CalciteInputTimeZone.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteInputTimeZone.schema">CalciteInputTimeZone.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLabel">CalciteLabel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLabel.tag">CalciteLabel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLabel.schema">CalciteLabel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLink">CalciteLink</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLink.tag">CalciteLink.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLink.schema">CalciteLink.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteList">CalciteList</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteList.tag">CalciteList.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteList.schema">CalciteList.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteListItem">CalciteListItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItem.tag">CalciteListItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItem.schema">CalciteListItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteListItemGroup">CalciteListItemGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItemGroup.tag">CalciteListItemGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteListItemGroup.schema">CalciteListItemGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteLoader">CalciteLoader</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLoader.tag">CalciteLoader.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteLoader.schema">CalciteLoader.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMenu">CalciteMenu</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenu.tag">CalciteMenu.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenu.schema">CalciteMenu.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMenuItem">CalciteMenuItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenuItem.tag">CalciteMenuItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMenuItem.schema">CalciteMenuItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteMeter">CalciteMeter</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMeter.tag">CalciteMeter.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteMeter.schema">CalciteMeter.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigation">CalciteNavigation</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigation.tag">CalciteNavigation.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigation.schema">CalciteNavigation.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigationLogo">CalciteNavigationLogo</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationLogo.tag">CalciteNavigationLogo.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationLogo.schema">CalciteNavigationLogo.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNavigationUser">CalciteNavigationUser</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationUser.tag">CalciteNavigationUser.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNavigationUser.schema">CalciteNavigationUser.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteNotice">CalciteNotice</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNotice.tag">CalciteNotice.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteNotice.schema">CalciteNotice.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteOption">CalciteOption</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOption.tag">CalciteOption.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOption.schema">CalciteOption.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteOptionGroup">CalciteOptionGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOptionGroup.tag">CalciteOptionGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteOptionGroup.schema">CalciteOptionGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePagination">CalcitePagination</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePagination.tag">CalcitePagination.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePagination.schema">CalcitePagination.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePanel">CalcitePanel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePanel.tag">CalcitePanel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePanel.schema">CalcitePanel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalcitePopover">CalcitePopover</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePopover.tag">CalcitePopover.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalcitePopover.schema">CalcitePopover.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteProgress">CalciteProgress</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteProgress.tag">CalciteProgress.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteProgress.schema">CalciteProgress.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRadioButton">CalciteRadioButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButton.tag">CalciteRadioButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButton.schema">CalciteRadioButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup">CalciteRadioButtonGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup.tag">CalciteRadioButtonGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRadioButtonGroup.schema">CalciteRadioButtonGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteRating">CalciteRating</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRating.tag">CalciteRating.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteRating.schema">CalciteRating.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteScrim">CalciteScrim</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteScrim.tag">CalciteScrim.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteScrim.schema">CalciteScrim.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSegmentedControl">CalciteSegmentedControl</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControl.tag">CalciteSegmentedControl.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControl.schema">CalciteSegmentedControl.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem">CalciteSegmentedControlItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem.tag">CalciteSegmentedControlItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSegmentedControlItem.schema">CalciteSegmentedControlItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSelect">CalciteSelect</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSelect.tag">CalciteSelect.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSelect.schema">CalciteSelect.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSheet">CalciteSheet</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSheet.tag">CalciteSheet.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSheet.schema">CalciteSheet.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteShell">CalciteShell</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShell.tag">CalciteShell.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShell.schema">CalciteShell.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteShellPanel">CalciteShellPanel</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShellPanel.tag">CalciteShellPanel.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteShellPanel.schema">CalciteShellPanel.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSlider">CalciteSlider</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSlider.tag">CalciteSlider.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSlider.schema">CalciteSlider.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSortHandle">CalciteSortHandle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortHandle.tag">CalciteSortHandle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortHandle.schema">CalciteSortHandle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSortableList">CalciteSortableList</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortableList.tag">CalciteSortableList.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSortableList.schema">CalciteSortableList.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSplitButton">CalciteSplitButton</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSplitButton.tag">CalciteSplitButton.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSplitButton.schema">CalciteSplitButton.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStack">CalciteStack</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStack.tag">CalciteStack.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStack.schema">CalciteStack.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStepper">CalciteStepper</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepper.tag">CalciteStepper.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepper.schema">CalciteStepper.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteStepperItem">CalciteStepperItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepperItem.tag">CalciteStepperItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteStepperItem.schema">CalciteStepperItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwatch">CalciteSwatch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatch.tag">CalciteSwatch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatch.schema">CalciteSwatch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwatchGroup">CalciteSwatchGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatchGroup.tag">CalciteSwatchGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwatchGroup.schema">CalciteSwatchGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteSwitch">CalciteSwitch</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwitch.tag">CalciteSwitch.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteSwitch.schema">CalciteSwitch.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTab">CalciteTab</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTab.tag">CalciteTab.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTab.schema">CalciteTab.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabNav">CalciteTabNav</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabNav.tag">CalciteTabNav.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabNav.schema">CalciteTabNav.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabTitle">CalciteTabTitle</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabTitle.tag">CalciteTabTitle.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabTitle.schema">CalciteTabTitle.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTable">CalciteTable</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTable.tag">CalciteTable.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTable.schema">CalciteTable.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableCell">CalciteTableCell</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableCell.tag">CalciteTableCell.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableCell.schema">CalciteTableCell.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableHeader">CalciteTableHeader</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableHeader.tag">CalciteTableHeader.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableHeader.schema">CalciteTableHeader.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTableRow">CalciteTableRow</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableRow.tag">CalciteTableRow.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTableRow.schema">CalciteTableRow.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTabs">CalciteTabs</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabs.tag">CalciteTabs.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTabs.schema">CalciteTabs.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTextArea">CalciteTextArea</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTextArea.tag">CalciteTextArea.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTextArea.schema">CalciteTextArea.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTile">CalciteTile</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTile.tag">CalciteTile.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTile.schema">CalciteTile.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTileGroup">CalciteTileGroup</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTileGroup.tag">CalciteTileGroup.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTileGroup.schema">CalciteTileGroup.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTimePicker">CalciteTimePicker</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTimePicker.tag">CalciteTimePicker.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTimePicker.schema">CalciteTimePicker.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTooltip">CalciteTooltip</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTooltip.tag">CalciteTooltip.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTooltip.schema">CalciteTooltip.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTree">CalciteTree</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTree.tag">CalciteTree.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTree.schema">CalciteTree.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.CalciteTreeItem">CalciteTreeItem</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTreeItem.tag">CalciteTreeItem.tag</a>
+  </li>
+  <li class="fd-toc-item" data-depth="3">
+    <a href="#spaday_calcite.CalciteTreeItem.schema">CalciteTreeItem.schema</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.DESIGN">DESIGN</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.package">package</a>
+  </li>
+  <li class="fd-toc-item" data-depth="2">
+    <a href="#spaday_calcite.TOKENS">TOKENS</a>
+  </li>
 </ul>
 
-          </div>
-        </div>
-      </div>
-      
-      
-    </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=e259d695"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../../_static/searchlite.js?v=a5320898"></script>
-    <script data-searchlite-adopt="true" defer="defer" src="../../_static/searchlite-ui.js?v=4e4bdd69"></script>
-    <script src="../../_static/js/custom.js?v=956e5d78"></script>
-    </body>
+  <div class="fd-toc-actions">
+    <a class="fd-toc-action" href="https://github.com/1kbgz/spaday-calcite/edit/HEAD/autoapi/spaday_calcite/index.rst" target="_blank" rel="noopener" title="Edit this page"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg><span>Edit this page</span></a>
+    <a class="fd-toc-action" href="../../_sources/autoapi/spaday_calcite/index.rst.txt" rel="nofollow" title="View source"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg><span>View source</span></a>
+  </div>
+</nav>
+<button type="button" id="fd-toc-restore" class="fd-icon-button" aria-label="Expand page navigation" title="Expand page navigation" aria-controls="fd-toc" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></button>
+</div>
+<dialog id="fd-search-dialog" aria-label="Search">
+  <form class="fd-search-panel" method="dialog" role="search">
+    <div class="fd-search-field">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fd-icon "><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="fd-search-input" autocomplete="off" spellcheck="false" placeholder="Search documentation..." aria-label="Search" />
+      <kbd class="fd-kbd">Esc</kbd>
+    </div>
+    <div id="fd-search-results" role="listbox" aria-label="Search results"></div>
+    <p id="fd-search-empty" class="fd-search-empty" hidden>No results found.</p>
+  </form>
+</dialog>
+  </body>
 </html>
